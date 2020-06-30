@@ -1,15 +1,63 @@
-<!DOCTYPE html>
 <html>
-  <head>
-    <title>YUMENIKKI</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <title>YUMENIKKI</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+<body>
+  <% if user_signed_in? %>
+  <header class="navbar navbar-fixed-top navbar-inverse">
+    <div class="container">
+      <nav class="nav navbar-nav navbar-left">
+        <span>YUMENIKKI</span>
+      </nav>
+      <nav>
+        <ul class="nav navbar-nav navbar-right">
+          <li> <%= link_to 'Home', user_path(current_user.id), class: "glyphicon glyphicon-home home" %></li>
+          <li><%= link_to "Users","/users", class: "glyphicon glyphicon-user users" %></li>
+          <li><%= link_to "Posts","/posts", class: "glyphicon glyphicon-book books" %></li>
+          <li><%= link_to "Logout",destroy_user_session_path, class: "glyphicon glyphicon-log-out logout",method: :delete %></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-  <body>
+
+
+  <% else %>
+  <header class="navbar navbar-fixed-top navbar-inverse">
+    <div class="container">
+      <nav class="nav navbar-nav navbar-left">
+        <span>YUMENIKKI</span>
+      </nav>
+      <nav>
+        <ul class="nav navbar-nav navbar-right">
+          <li><%= link_to "Home","/", class: "glyphicon glyphicon-home home" %></li>
+          <li><%= link_to "About","/", class: "glyphicon glyphicon-link about" %></li>
+          <li><%= link_to "Sign up","/users/sign_up",class: "glyphicon glyphicon-edit sign_up"  %></li>
+          <li><%= link_to "Login","/users/sign_in",class: "glyphicon glyphicon-log-in sign_in"  %></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <% end %>
+  <div class="container">
     <%= yield %>
-  </body>
+  </div>
+  <footer>
+    <div class='container'>
+      <div class='row'>
+        <div class='col-xs-3 col-xs-offset-9'>
+          <p>CopyRight Infratop.inc</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+</body>
 </html>
