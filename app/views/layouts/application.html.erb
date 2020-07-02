@@ -10,8 +10,8 @@
 </head>
 <body>
   <% if user_signed_in? %>
-  <header class="navbar navbar-fixed-top navbar-inverse">
-    <div class="gold">
+  <header header class="header-box">
+    <div class="mybox2">
     <div class="container">
         <nav class="nav navbar-nav navbar-left">
           <span class="logo">夢日記
@@ -21,10 +21,10 @@
         </nav>
         <nav>
           <ul class="nav navbar-nav navbar-right">
-            <li> <%= link_to 'Home', user_path(current_user.id), class: "glyphicon glyphicon-home home" %></li>
-            <li><%= link_to "Users","/users", class: "glyphicon glyphicon-user users" %></li>
-            <li><%= link_to "Posts","/posts", class: "glyphicon glyphicon-book books" %></li>
-            <li><%= link_to "Logout",destroy_user_session_path, class: "glyphicon glyphicon-log-out logout",method: :delete %></li>
+            <li> <%= link_to 'マイページ', user_path(current_user.id), class: "glyphicon glyphicon-home home" %></li>
+            <li><%= link_to "ユーザー一覧","/users", class: "glyphicon glyphicon-user users" %></li>
+            <li><%= link_to "投稿一覧","/posts", class: "glyphicon glyphicon-book books" %></li>
+            <li><%= link_to "ログアウト",destroy_user_session_path, class: "glyphicon glyphicon-log-out logout",method: :delete %></li>
           </ul>
         </nav>
       </div>
@@ -34,19 +34,22 @@
 
 
   <% else %>
-  <header class="navbar navbar-fixed-top navbar-inverse">
+  <header header class="header-box">
+    <div class="mybox2">
+
     <div class="container">
       <nav class="nav navbar-nav navbar-left">
         <span class="logo">夢日記</span>
       </nav>
       <nav>
         <ul class="nav navbar-nav navbar-right">
-          <li><%= link_to "Home","/", class: "glyphicon glyphicon-home home" %></li>
+          <li><%= link_to "トップページに戻る","/", class: "glyphicon glyphicon-home home" %></li>
           <li><%= link_to "About","/", class: "glyphicon glyphicon-link about" %></li>
-          <li><%= link_to "Sign up","/users/sign_up",class: "glyphicon glyphicon-edit sign_up"  %></li>
-          <li><%= link_to "Login","/users/sign_in",class: "glyphicon glyphicon-log-in sign_in"  %></li>
+          <li><%= link_to "新規登録","/users/sign_up",class: "glyphicon glyphicon-edit sign_up"  %></li>
+          <li><%= link_to "ログイン","/users/sign_in",class: "glyphicon glyphicon-log-in sign_in"  %></li>
         </ul>
       </nav>
+    </div>
     </div>
   </header>
 

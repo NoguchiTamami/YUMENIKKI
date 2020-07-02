@@ -17,9 +17,10 @@
 @import "honoka";
 
 .logo {
-	font-size: 48px;
-	position: absolute;
+	font-size: 40px;
 	bottom: 0;
+	top: 20;
+	color: #642020;
 }
 
 .i{
@@ -34,4 +35,208 @@
 .i{
 	font-size: 32px;
 	color: #ffb6c1;
+}
+
+.header-box{
+	position: relative;
+    top: 0px;                   /* 位置(上0px) */
+    left: 0px;                  /* 位置(右0px) */
+    width: 100%;                /* 横幅100%　*/
+    height: 30px;             /* 縦幅140px */
+    z-index: 4;
+}
+
+.log-form {
+  width: 40%;
+  min-width: 320px;
+  max-width: 475px;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+-moz-transform: translate(-50%,-50%);
+-o-transform: translate(-50%,-50%);
+-ms-transform: translate(-50%,-50%);
+transform: translate(-50%,-50%);
+
+  box-shadow: 0px 2px 5px rgba(0,0,0,.25);
+}
+
+form {
+    display: block;
+    width: 80%;
+    padding: 2em;
+  }
+
+h2 {
+    display: block;
+    background: gold;
+    color: lighten;
+    font-family: 'open sans condensed';
+    text-align: center
+  }
+
+  .box15 {
+    padding: 0.2em 0.5em;
+    margin: 2em 0;
+    color: #565656;
+    background: #ffeaea;
+    box-shadow: 0px 0px 0px 10px #ffeaea;
+    border: dashed 2px #ffc3c3;
+    border-radius: 8px;
+}
+
+.box14{
+    padding: 0.2em 0.5em;
+    margin: 2em 0;
+    background: #d6ebff;
+    box-shadow: 0px 0px 0px 10px #d6ebff;
+    border: dashed 2px white;
+}
+
+.box18{
+    margin:2em 0;
+    position: relative;
+    padding: 0.25em 1em;
+    border: solid 2px #ffcb8a;
+    border-radius: 3px 0 3px 0;
+}
+.box18:before,.box18:after
+{
+    content: '';
+    position: absolute;
+    width:10px;
+    height: 10px;
+    border: solid 2px #ffcb8a;
+    border-radius: 50%;
+}
+.box18:after {
+    top:-12px;
+    left:-12px;
+}
+.box18:before {
+    bottom:-12px;
+    right:-12px;
+}
+
+.box23 {
+    position: relative;
+    margin: 2em 0 2em 40px;
+    padding: 8px 15px;
+    background: #fff0c6;
+    border-radius: 30px;
+}
+.box23:before{font-family: FontAwesome;
+    content: "\f111";
+    position: absolute;
+    font-size: 15px;
+    left: -40px;
+    bottom: 0;
+    color: #fff0c6;
+}
+.box23:after{
+    font-family: FontAwesome;
+    content: "\f111";
+    position: absolute;
+    font-size: 23px;
+    left: -23px;
+    bottom: 0;
+    color: #fff0c6;
+}
+
+.mybox{
+	background-color: #F6D4D8;  /* 背景色 */
+	border-radius: 5px;
+	margin: 20px 5px; /* 外側の余白 上下・左右 */
+	padding: 30px 20px 20px 20px; /* 内側の余白 上・右・下・左 */
+	position: relative;
+	z-index: 0;
+}
+.mybox:before{
+	border: 1px solid #fff; /* 白い実線 */
+	border-radius: 5px;
+	content: '';
+	display: block;
+	margin: 4px;
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: -1;
+}
+.mybox:after{
+	background-color: rgba(249,223,213,0.9);  /* マステ背景色 */
+	background-image: radial-gradient(#fff 20%, transparent 0), radial-gradient(#fff 20%, transparent 0); /* 水玉の色 */
+	background-position: 0 0, 8px 8px;  /* 水玉の距離 */
+	background-size: 15px 15px; /* 水玉の大きさ */
+	border-left: 2px dotted rgba(0,0,0,0.1);
+	border-right: 2px dotted rgba(0,0,0,0.1);
+	box-shadow: 0 0 5px rgba(0,0,0,0.2);
+	content: '新規投稿';
+	display: block;
+	padding: 5px 20px;  
+	text-align: center;
+	position: absolute;
+	top: -10px;
+	left: 20px;
+	transform: rotate(-3deg);
+	-moz-transform: rotate(-3deg);
+	-webkit-transform: rotate(-3deg);
+	-o-transform: rotate(-3deg);
+}
+
+.mybox2{
+	background: none;
+	border: 1px solid #f3cbd0;	/* 線の太さ・種類・色 */
+	margin: 5px 10px;	/* 外側の余白 上下・左右 */
+	padding: 20px;	/* 内側の余白 */
+	position: relative;
+}
+
+.mybox2:after{
+	background: repeating-linear-gradient(-45deg, #f5d5da, #f5d5da 5px, #fcf0f1 0, #fcf0f1 10px); /* ストライプの色 */
+	content: '';
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+
+.mybox3{
+    border: 2px dotted #EAA8BF; /* 線の太さ・種類・色 */
+    margin: 30px 20px;  /* 外側の余白 上下・左右 */
+    padding: 15px 20px; /* 内側の余白 上下・左右 */
+    position: relative;
+}
+.mybox3:before{
+    content: '＊';
+    color: #fff;    /* 左上の花の色 */
+    font-size: 50px;    /* 左上の花のサイズ */
+    font-weight: bold; 
+    position: absolute;
+    top: -38px;
+    left: -25px;
+    transform: rotate(20deg);
+    -moz-transform: rotate(20deg);
+    -webkit-transform: rotate(20deg); 
+    -o-transform: rotate(20deg);
+    text-shadow:  0 0 8px #eaa8bf, 0 0 6px #eaa8bf, 0 0 4px #eaa8bf, 0 0 2px #eaa8bf, 0 0 0.5px #eaa8bf;    /* 左上の花の縁取りの色 */
+}
+.mybox3:after{
+    content: '*';
+    color: #fff;    /* 右下の花の色 */
+    font-size: 50px;    /* 右下の花のサイズ */
+    font-weight: bold; 
+    position: absolute;
+    bottom: -45px;
+    right: -15px;
+    transform: rotate(20deg);
+    -moz-transform: rotate(20deg);
+    -webkit-transform: rotate(20deg); 
+    -o-transform: rotate(20deg);
+    text-shadow:  0 0 8px #eaa8bf, 0 0 6px #eaa8bf, 0 0 4px #eaa8bf, 0 0 2px #eaa8bf, 0 0 0.5px #eaa8bf;    /* 右下の花の縁取りの色 */
 }

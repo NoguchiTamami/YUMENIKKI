@@ -1,0 +1,34 @@
+<html>
+<boby>
+<div class="row">
+	<div class="col-xs-3">
+		<h1>User info</h1>
+
+		<% if @user.errors.any? %>
+		<div id="error_explanation">
+			<h2><%= pluralize(@user.errors.count, "error") %> prohibited
+			this book from being saved:</h2>
+			<ul>
+				<% @user.errors.full_messages.each do |msg|%>
+				<li><%= msg %></li>
+				<% end %>
+			</ul>
+		</div>
+		<% end %>
+
+		<%= form_for(@user) do |f| %>
+		<p>Name</p> 
+		<%= f.text_field :name, autofocus: true, class:"form-control", id:"inputEmail" %>  
+		<p>Image</p>
+		<%= f.attachment_field :profile_image, class: "user-edit-form" %> 
+		<p>Introduction</p>
+		<%= f.text_field :introduction, autofocus: true, class:"form-control", id:"inputEmail" %> 
+
+		<div class="actions">
+			<input type="submit" name="commit" value="Update User" data-disable-with="Update User" />
+		</div>
+		<% end %>  
+	</div>  
+</div>
+</boby>
+</html>

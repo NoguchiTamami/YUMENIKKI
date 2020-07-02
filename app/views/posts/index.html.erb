@@ -4,62 +4,73 @@
   <p id="notice"><%= notice %></p>
   <div class="row">
     <div class="col-xs-3">
-      <h2>会員情報</h2>
-      <table class='table'>
-        <tr>
-          <th>お名前</th>
-          <th><%= current_user.name %></th>
-        </tr>
-        <tr>
-          <th>ひとこと</th>
-          <th><%= current_user.name %></th>
-        </tr>
-      </table>
+      <div class="box18">
+        <h2>会員情報</h2>
+        <table class='table'>
+          <tr>
+            <th>お名前</th>
+            <th><%= current_user.name %></th>
+          </tr>
+          <tr>
+            <th>ひとこと</th>
+            <th><%= current_user.name %></th>
+          </tr>
+        </table>
 
-      <div class='row'>
-        <!-- <%= link_to "" , edit_user_path(@user),class: "col-xs-12 btn btn-default glyphicon glyphicon-wrench " %> -->
+        <div class='row'>
+          <%= link_to " " ,edit_user_path(@user), class: "col-xs-10 btn btn-default glyphicon glyphicon-wrench" %>
+        </div><br>
       </div>
 
       <br>
-      <h2>新規投稿</h2>
-      <%= form_for(@post) do |f| %>
-      <% if @post.errors.any? %>
-      <div id="error_explanation">
-        <h2><%= pluralize(@post.errors.count, "error") %> prohibited
-        this post from being saved:</h2>
-        <ul>
-          <% @post.errors.full_messages.each do |msg|%>
-          <li><%= msg %></li>
-          <% end %>
-        </ul>
-      </div>
-      <% end %>
-      <div class="field row">
-        <p>どんな夢？</p>
-        <%= f.text_field :title , class: "field" %>
-      </div>
-      <div class="field row">
-        <p>何をしたの？</p>
-        <%= f.text_area :body , class: "field" %><br><br>
-
-        <%= f.submit '投稿する', class: "btn btn-warning col-xs-7" %>
+      <div class="mybox">
+        <%= form_for(@post) do |f| %>
+        <% if @post.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@post.errors.count, "error") %> prohibited
+          this post from being saved:</h2>
+          <ul>
+            <% @post.errors.full_messages.each do |msg|%>
+            <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
         <% end %>
+        <div class="field row">
+          <p>どんな夢？</p>
+          <%= f.text_field :title , class: "field" %>
+        </div>
+        <div class="field row">
+          <p>何をしたの？</p>
+          <%= f.text_area :body , class: "field" %><br><br>
+
+          <%= f.submit '投稿する', class: "btn btn-warning col-xs-7" %>
+          <% end %>
+        </div>
       </div>
     </div>
     <div class="col-xs-9">
 
-      <h1>投稿された夢</h1>
-
-      <table class='table table-hover table-inverse'>
-        <thead>
-          <tr>
-            <th></th>
-            <th>どんな夢？</th>
-            <th>何をしたの？</th>
-            <th colspan="3"></th>
-          </tr>
-        </thead>
-      </table><br>
+      <div class="box15">
+        <h1>投稿された夢</h1>
+        <table class='table table-hover table-inverse'>
+          <thead>
+            <tr>
+              <th>どんな夢？</th>
+              <th>何をしたの？</th>
+              <th colspan="3"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @posts.each do |post| %>
+            <tr>
+              <td><%= link_to post.title, post %></td>
+              <td><%= post.body %></td>
+            </tr>
+            <% end %>
+          </tbody>
+        </table><br>
+      </div>
     </div>
 
   </boby>

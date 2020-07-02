@@ -2,15 +2,15 @@
 <p id="notice"><%= notice %></p>
 <div class="row">
   <div class="col-xs-3">
-
-    <h2>User info</h2>
+<div class="box18">
+    <h2>会員情報</h2>
     <table class='table'>
       <tr>
-        <th>name</th>
+        <th>お名前</th>
         <th><%= current_user.name %></th>
       </tr>
       <tr>
-        <th>introduction</th>
+        <th>ひとこと</th>
         <th><%= current_user.name %></th>
       </tr>
     </table>
@@ -18,8 +18,9 @@
     <div class='row'>
       <%= link_to " " ,edit_user_path(@user), class: "col-xs-12 btn btn-default glyphicon glyphicon-wrench" %>
     </div><br>
+  </div>
 
-    <h2>New book</h2>
+    <div class="mybox">
     <%= form_for(@post, url: '/posts') do |f| %>
     <% if @post.errors.any? %>
     <div id="error_explanation">
@@ -36,35 +37,37 @@
     <% end %>
 
     <div class="field row">
-      <p>Title</p>
+      <p>どんな夢？</p>
       <%= f.text_field :title, class: "field" %>
     </div>
     <div class="field row" >
-    </p>Opinion</p>
+    </p>なにがあったの？</p>
     <%= f.text_area :body, class: "field" %><br>
-    <%= f.submit 'Create Book', class: "btn btn-primary col-xs-12" %>
+    <%= f.submit '投稿する', class: "btn btn-warning col-xs-7" %>
     <% end %>
 
   </div>
 </div>
+</div>
 <div class="col-xs-9">
-
-  <h1>Users</h1>
-  <table class='table table-hover table-inverse'>
-    <thead>
-      <tr> 
-        <th>image</th>
-        <th>name</th>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @users.each do |user| %>
-      <tr>
-        <td><%= user.name %></td>
-        <td><%= link_to 'Show',user_path(user.id) %>
+  <div class="box14">
+    <h1>おともだち</h1>
+    <table class='table table-hover table-inverse'>
+      <thead>
+        <tr>
+          <th>٩(ˊᗜˋ*)و</th>
+          <th>ひとこと</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @users.each do |user| %>
+        <tr>
+          <td><%= user.name %></td>
+          <td><%= link_to 'Show',user_path(user.id) %></td>
         </tr>
         <% end %>
       </tbody>
     </table><br>
   </div>
+</div>

@@ -4,67 +4,64 @@
 <p id="notice"><%= notice %></p>
 <div class="row">
   <div class="col-xs-3">
-   <h2>User info</h2>
-   <table class='table'>
-      <th>name</th>
-      <th><%= @user.name %></th>
-    </tr>
-    <tr>
-      <th>introduction</th>
-      <th><%= @user.name %></th>
-    </tr>
-  </table>
-  <p><%= link_to '', edit_user_path(current_user.id),class: "col-xs-12 btn btn-default glyphicon glyphicon-wrench " %></p>
-  <br>
+    <div class="box18">
+      <h2>会員情報</h2>
+      <table class='table'>
+        <tr>
+          <th>お名前</th>
+          <th><%= current_user.name %></th>
+        </tr>
+        <tr>
+          <th>ひとこと</th>
+          <th><%= current_user.name %></th>
+        </tr>
+      </table>
 
-  <h2>New book</h2>
+      <div class='row'>
+        <%= link_to " " ,edit_user_path(@user), class: "col-xs-10 btn btn-default glyphicon glyphicon-wrench" %>
+      </div><br>
+    </div>
 
-  <%= form_for(@post_new, url: '/posts') do |f| %>
-  <% if @post.errors.any? %>
-  <div id="error_explanation">
-    <h2><%= pluralize(@post.errors.count, "error") %> prohibited
-    this book from being saved:</h2>
-    <ul>
-      <% @post.errors.full_messages.each do |msg|%>
-      <li><%= msg %></li>
+    <div class="mybox">
+
+      <%= form_for(@post_new, url: '/posts') do |f| %>
+      <% if @post.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@post.errors.count, "error") %> prohibited
+        this book from being saved:</h2>
+        <ul>
+          <% @post.errors.full_messages.each do |msg|%>
+          <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
       <% end %>
-    </ul>
+      <p>どんなゆめ？</p>
+      <%= f.text_field :title, class: "field" %>
+
+
+    </p>なにがあったの？</p>
+    <%= f.text_area :body,class: "field" %><br>
+
+    <%= f.submit '投稿する', class: "btn btn-warning col-xs-10" %>
+
+    <% end %>
   </div>
-  <% end %>
-  <p>Title</p>
-  <%= f.text_field :title, class: "field" %>
-
-
-</p>Opinion</p>
-<%= f.text_area :body,class: "field" %><br>
-
-<%= f.submit 'Create Book', class: "btn btn-primary col-xs-12" %>
-
-<% end %>
 </div>
 <div class="col-xs-9">
-  <h1>Book detail</h1>
-  <table class='table' >
-
-    <tr>
-      <th><%= link_to user_path(@post.user.id) do %>
-          
-        <%= @user.name %><% end %></th>
-
-      <td><%= @post.title %></td>
-      <td><%= @post.body %></td>
-
-      <div>
-        <% if current_user.id == @user.id %>
-
-        <td><%= link_to 'Edit', edit_post_path(@post), class: 'btn-sm btn-success' %></td>
-        <td><%= link_to 'Destroy', post_path(@post), method: :delete, class: "btn-sm btn-danger destroy_book_27368" %></td>
-
-        <%  end %>
-      </div>
-
-
-    </tr>
-  </table>
+  <div class="mybox3">
+    <main class="mdl-layout__content">
+            <h1 class="mdl-card__title-text">
+              <%= @post.title %></h1>
+            <p><%= @post.body %></p>
+            <button class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">favorite</i></button>
+            <button class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">share</i></button>
+            <%= link_to 'Edit', edit_post_path(@post), class: 'btn-sm btn-success' %>
+            <%= link_to 'Destroy', post_path(@post), method: :delete, class: "btn-sm btn-danger destroy_book_27368" %>
+        <div class="mdl-card mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-shadow--2dp">
+          <figure class="mdl-card__media">
+            <img src="https://tfirdaus.github.io/mdl/images/html5.jpg" alt="" />
+          </figure>
+  </main>
 </div>
 </div>

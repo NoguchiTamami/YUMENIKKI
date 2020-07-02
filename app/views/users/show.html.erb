@@ -4,14 +4,14 @@
 <p id="notice"><%= notice %></p>
 <div class="row">
  <div class="col-xs-3">
-
-  <h2>User info</h2>
+<div class="box18">
+  <h2>会員情報</h2>
   <table class='table'>
-      <th>name</th>
+      <th>お名前</th>
       <th><%= @user.name %></th>
     </tr>
     <tr>
-      <th>introduction</th>
+      <th>ひとこと</th>
       <th><%= @user.name %></th>
     </tr>
   </table>
@@ -19,8 +19,8 @@
   <div class='row'>
     <%= link_to '', edit_user_path(@user),class: "col-xs-12 btn btn-default glyphicon glyphicon-wrench " %>
   </div><br>
-
-  <h2>New book</h2>
+</div>
+ <div class="mybox">
   <%= form_for(@post) do |f| %>
   <% if @post.errors.any? %>
   <div id="error_explanation">
@@ -34,27 +34,27 @@
   </div>
   <% end %>
   <div class="field row">
-    <p>Title</p>
+    <p>どんなゆめ？</p>
     <%= f.text_field :title, class: "field" %>
   </div>
   <div class="field row">
-  </p>Opinion</p>
+  </p>何がおきたの？</p>
   <%= f.text_area :body, class: "field" %><br>
-  <%= f.submit 'Create Book', class: "btn btn-primary col-xs-12" %>
+   <%= f.submit '投稿する', class: "btn btn-warning col-xs-7" %>
   <% end %>
 </div>
 </div>
+</div>
 <div class="col-xs-9">
-
-  <h1>Books</h1>
+<div class="box23">
+  <h1>マイページ</h1>
   <table class='table table-hover table-inverse'>
     <thead>
       <tr> 
-        <th></th>
-        <th>Title</th>
-        <th>Opinion</th>
+        <th>どんなゆめ？</th>
+        <th>なにがおきたの？</th>
         <th colspan="3"></th>
-        <% @posts.each do |book| %>
+        <% @posts.each do |post| %>
         <tr>
           <td><%= link_to post.title, post %></td>
           <td><%= post.body %></td>
@@ -64,4 +64,5 @@
     </thead>
 
   </table><br>
+</div>
 </div>
