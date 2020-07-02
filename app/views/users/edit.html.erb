@@ -1,0 +1,36 @@
+<html>
+<body><br><br><br>
+<div class="row">
+	<div class="col-xs-3">
+		<h1>会員情報</h1>
+
+		<% if @user.errors.any? %>
+		<div id="error_explanation">
+			<h2><%= pluralize(@user.errors.count, "error") %> prohibited
+			this book from being saved:</h2>
+			<ul>
+				<% @user.errors.full_messages.each do |msg|%>
+				<li><%= msg %></li>
+				<% end %>
+			</ul>
+		</div>
+		<% end %>
+
+		<%= form_for (@user) do |f| %>
+    <div>
+      <label>Name</label>
+      <!-- <%= f.text_field :name %> -->
+    </div>
+    <div>
+        <label>Image</label>
+    </div>
+    <div>
+    <label>Introduction</label>
+    </div>
+    <div>
+    </div>
+  <% end %>
+	</div>  
+</div>
+</body>
+</html>
