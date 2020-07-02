@@ -4,14 +4,14 @@
   <p id="notice"><%= notice %></p>
   <div class="row">
     <div class="col-xs-3">
-      <h2>User info</h2>
+      <h2>会員情報</h2>
       <table class='table'>
         <tr>
-          <th>name</th>
+          <th>お名前</th>
           <th><%= current_user.name %></th>
         </tr>
         <tr>
-          <th>introduction</th>
+          <th>ひとこと</th>
           <th><%= current_user.name %></th>
         </tr>
       </table>
@@ -21,7 +21,7 @@
       </div>
 
       <br>
-      <h2>New book</h2>
+      <h2>新規投稿</h2>
       <%= form_for(@post) do |f| %>
       <% if @post.errors.any? %>
       <div id="error_explanation">
@@ -35,27 +35,27 @@
       </div>
       <% end %>
       <div class="field row">
-        <p>Title</p>
+        <p>どんな夢？</p>
         <%= f.text_field :title , class: "field" %>
       </div>
       <div class="field row">
-        <p>Opinion</p>
-        <%= f.text_area :body , class: "field" %><br>
+        <p>何をしたの？</p>
+        <%= f.text_area :body , class: "field" %><br><br>
 
-        <%= f.submit 'Create Book', class: "btn btn-primary col-xs-12" %>
+        <%= f.submit '投稿する', class: "btn btn-warning col-xs-7" %>
         <% end %>
       </div>
     </div>
     <div class="col-xs-9">
 
-      <h1>Books</h1>
+      <h1>投稿された夢</h1>
 
       <table class='table table-hover table-inverse'>
         <thead>
           <tr>
             <th></th>
-            <th>Title</th>
-            <th>Opinion</th>
+            <th>どんな夢？</th>
+            <th>何をしたの？</th>
             <th colspan="3"></th>
           </tr>
         </thead>
