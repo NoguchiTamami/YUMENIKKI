@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
 
  def new
-   @posts = Post.all
    @post = Post.new
  end
 
