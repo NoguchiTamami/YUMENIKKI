@@ -1,53 +1,14 @@
-<br>
-<br>
-<br>
+<br><br><br>
+<div class="container">
 <p id="notice"><%= notice %></p>
 <div class="row">
- <div class="col-xs-3">
-<div class="box18">
-  <h2>会員情報</h2>
-  <table class='table'>
-      <th>お名前</th>
-      <th><%= @user.name %></th>
-    </tr>
-    <tr>
-      <th>ひとこと</th>
-      <th><%= @user.name %></th>
-    </tr>
-  </table>
-
-  <div class='row'>
-    <%= link_to '', edit_user_path(@user),class: "col-xs-12 btn btn-default glyphicon glyphicon-wrench " %>
-  </div><br>
-</div>
- <div class="mybox">
-  <%= form_for(@post) do |f| %>
-  <% if @post.errors.any? %>
-  <div id="error_explanation">
-    <h2><%= pluralize(@book.errors.count, "error") %> prohibited
-    this book from being saved:</h2>
-    <ul>
-      <% @post.errors.full_messages.each do |msg|%>
-      <li><%= msg %></li>
-      <% end %>
-    </ul>
-  </div>
-  <% end %>
-  <div class="field row">
-    <p>どんなゆめ？</p>
-    <%= f.text_field :title, class: "field" %>
-  </div>
-  <div class="field row">
-  </p>何がおきたの？</p>
-  <%= f.text_area :body, class: "field" %><br>
-   <%= f.submit '投稿する', class: "btn btn-warning col-xs-7" %>
-  <% end %>
-</div>
-</div>
-</div>
+  <div class="col-xs-3">
+  <%= render :partial => 'layouts/userform', :locals => {:user => @user}%>
+   <%= render :partial => 'layouts/form', :locals => {:post => @post}%>
+ </div>
 <div class="col-xs-9">
 <div class="box23">
-  <h1>マイページ</h1>
+  <h1><%= @user.name %>のみた夢</h1>
   <table class='table table-hover table-inverse'>
     <thead>
       <tr> 
@@ -62,7 +23,8 @@
         <% end %>
       </tr>
     </thead>
-
   </table><br>
+</div>
+</div>
 </div>
 </div>

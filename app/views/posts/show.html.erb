@@ -1,67 +1,30 @@
 <br>
 <br>
 <br>
+<div class="container">
 <p id="notice"><%= notice %></p>
 <div class="row">
   <div class="col-xs-3">
-    <div class="box18">
-      <h2>会員情報</h2>
-      <table class='table'>
-        <tr>
-          <th>お名前</th>
-          <th><%= current_user.name %></th>
-        </tr>
-        <tr>
-          <th>ひとこと</th>
-          <th><%= current_user.name %></th>
-        </tr>
-      </table>
-
-      <div class='row'>
-        <%= link_to " " ,edit_user_path(@user), class: "col-xs-10 btn btn-default glyphicon glyphicon-wrench" %>
-      </div><br>
-    </div>
-
-    <div class="mybox">
-
-      <%= form_for(@post_new, url: '/posts') do |f| %>
-      <% if @post.errors.any? %>
-      <div id="error_explanation">
-        <h2><%= pluralize(@post.errors.count, "error") %> prohibited
-        this book from being saved:</h2>
-        <ul>
-          <% @post.errors.full_messages.each do |msg|%>
-          <li><%= msg %></li>
-          <% end %>
-        </ul>
-      </div>
-      <% end %>
-      <p>どんなゆめ？</p>
-      <%= f.text_field :title, class: "field" %>
-
-
-    </p>なにがあったの？</p>
-    <%= f.text_area :body,class: "field" %><br>
-
-    <%= f.submit '投稿する', class: "btn btn-warning col-xs-10" %>
-
-    <% end %>
+      <%= render :partial => 'layouts/userform', :locals => {:user => @user}%>
+      <%= render :partial => 'layouts/form', :locals => {:post => @post}%>
   </div>
-</div>
-<div class="col-xs-9">
-  <div class="mybox3">
-    <main class="mdl-layout__content">
-            <h1 class="mdl-card__title-text">
-              <%= @post.title %></h1>
-            <p><%= @post.body %></p>
-            <button class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">favorite</i></button>
-            <button class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">share</i></button>
-            <%= link_to 'Edit', edit_post_path(@post), class: 'btn-sm btn-success' %>
-            <%= link_to 'Destroy', post_path(@post), method: :delete, class: "btn-sm btn-danger destroy_book_27368" %>
+  <div class="col-xs-9">
+    <div class="mybox3">
+      <main class="mdl-layout__content">
+        <h1 class="mdl-card__title-text">
+          <%= @post.title %>
+        </h1>
+        <p><%= @post.body %></p>
+        <button class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">favorite</i></button>
+        <button class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">share</i></button>
+        <%= link_to 'Edit', edit_post_path(@post), class: 'btn-sm btn-success' %>
+        <%= link_to 'Destroy', post_path(@post), method: :delete, class: "btn-sm btn-danger destroy_book_27368" %>
         <div class="mdl-card mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-shadow--2dp">
-          <figure class="mdl-card__media">
-            <img src="https://tfirdaus.github.io/mdl/images/html5.jpg" alt="" />
-          </figure>
-  </main>
-</div>
+        </div>
+        <figure class="mdl-card__media">
+          <%= image_tag 'person_5.jpg', size: "600x400" %>
+        </figure>
+      </main>
+    </div>
+  </div>
 </div>

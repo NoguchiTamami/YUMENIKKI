@@ -50,9 +50,9 @@
   width: 40%;
   min-width: 320px;
   max-width: 475px;
-  background: #fff;
+  background: #FFD5EC;
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   -webkit-transform: translate(-50%,-50%);
 -moz-transform: translate(-50%,-50%);
@@ -71,7 +71,7 @@ form {
 
 h2 {
     display: block;
-    background: gold;
+    background: FFDBC9;
     color: lighten;
     font-family: 'open sans condensed';
     text-align: center
@@ -239,4 +239,37 @@ h2 {
     -webkit-transform: rotate(20deg); 
     -o-transform: rotate(20deg);
     text-shadow:  0 0 8px #eaa8bf, 0 0 6px #eaa8bf, 0 0 4px #eaa8bf, 0 0 2px #eaa8bf, 0 0 0.5px #eaa8bf;    /* 右下の花の縁取りの色 */
+}
+
+.fashionable-box4{
+  margin: 1em 0;
+  padding: 1em;
+  background-size: 20px 20px;
+  border-radius: 5px;
+  background-color: #f9ffff;
+  background-image: linear-gradient(45deg,rgba(255,186,238,.1) 25%,transparent 25%,transparent 50%,rgba(255,186,238,.1) 50%,rgba(255,186,238,.1) 75%,transparent 75%,transparent),linear-gradient(-45deg,rgba(255,186,238,.1) 25%,transparent 25%,transparent 50%,rgba(255,186,238,.1) 50%,rgba(255,186,238,.1) 75%,transparent 75%,transparent);
+  border: solid 2px #f48fb1;
+}
+
+.fashionable-box4 p{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+
+  background-image: url("hero_bg_1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+    height: 100%;
+}
+
+.flame08 {
+padding: 1em;
+margin: 2em auto;
+color: #696969;
+width:100%;
+background: #fffafa;
+border-left: double 8px #20b2aa;
+border-right: double 8px #20b2aa;
 }

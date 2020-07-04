@@ -1,0 +1,14 @@
+<div class="box18">
+      <h2>会員情報</h2>
+      <table class='table'>
+        <tr>
+          <th>お名前</th>
+          <th><%= current_user.name %></th>
+        </tr>
+        <tr>
+          <th>ひとこと</th>
+          <th><%= current_user.name %></th>
+        </tr>
+      </table>
+        <%= link_to "編集する" ,edit_user_path(user), class: "col-xs-10 btn btn-default" %><br><br>
+    </div>
