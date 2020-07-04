@@ -2,11 +2,11 @@
   <div class="container">
     <p id="notice"><%= notice %></p>
     <div class="row">
-      <div class="col-xs-3">
+      <div class="col-xs-4">
         <%= render :partial => 'layouts/userform', :locals => {:user => @user}%>
         <%= render :partial => 'layouts/form', :locals => {:post => @post}%>
       </div>
-      <div class="col-xs-9">
+      <div class="col-xs-8">
         <div class="box15">
           <h1>投稿された夢</h1>
           <table class='table table-hover table-inverse'>
