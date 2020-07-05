@@ -258,7 +258,7 @@ h2 {
 
 body {
 
-  background-image: url("hero_bg_1.jpg");
+  background-image: url("memphis-colorful.png");
   background-repeat: no-repeat;
   background-size: cover;
     height: 100%;
@@ -351,4 +351,160 @@ border-right: double 8px #20b2aa;
 .hitokoto p{
   margin: 0;
   padding: 0;
+}
+
+.box {
+position: relative;
+margin: 10px auto;
+padding: 20px;
+width: 90%;
+background-color: #fff;
+color: #000;
+border: 5px solid #999;
+border-radius: 3px;
+box-shadow: 0 0 8px #333, 0 0 2px #555 inset;
+}
+
+.box::before,
+.box::after {
+position: absolute;
+content: '';
+bottom: 2px;
+width: 25px; 
+border-radius: 2px;
+box-shadow: 1px 1px 3px #666;
+} 
+
+.box::before {
+right: 55px;
+border: solid 3px #ff0000;
+}
+
+.box::after {
+right: 20px;
+border: solid 3px #333;
+transform: rotate(8deg);
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+
+
+.btn,
+a.btn,
+button.btn {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  position: relative;
+  display: inline-block;
+  padding: 1rem 4rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: #212529;
+  border-radius: 0.5rem;
+}
+
+a.btn-border-shadow {
+  padding: calc(1.5rem - 12px) 3rem 1.5rem;
+
+  background: #fff;
+}
+
+a.btn-border-shadow:before {
+  position: absolute;
+  top: -6px;
+  left: -6px;
+
+  width: 100%;
+  height: 100%;
+
+  content: "";
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+
+  border: 3px solid #000;
+  border-radius: 0.5rem;
+}
+
+a.btn-border-shadow:hover {
+  padding: calc(1.5rem - 6px) 3rem;
+}
+
+a.btn-border-shadow:hover:before {
+  top: 0;
+  left: 0;
+}
+
+.mybox5{
+background: rgba(255, 245, 238, 0.61);
+  border: 1px solid #ef858c;  /* 線の太さ・種類・色 */
+  border-radius: 5px;
+  padding: 45px 10px 10px 10px; /* 内側の余白 上・右・左・下 */
+  position: relative;
+  z-index: 0;
+}
+.mybox5:before{
+  background-color: #ef858c;  /* タイトル部分背景色 */
+  border-radius: 5px 5px 0px 0px;
+  color: #fff;  /* タイトル部分文字色 */
+  content: 'ステータス編集';
+  font-size: 40px;
+  height: 55px; /* タイトル部分高さ */
+  padding: 5px 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+.mybox5:after {
+  border-style: solid;
+  border-width: 10px 10px 0 10px;
+  border-color: #ef858c transparent transparent transparent;  /* 吹き出し三角部分の色 */
+  content: "";
+  position: absolute;
+  top: 35px;
+  left: 10px;
+  width: 0px;
+  height: 0px;
+  z-index: 1;
+}
+
+.flame11 {
+padding: 1em;
+margin: 2em auto;
+width:100%;
+color: #696969;
+background: #f0ffff;
+border-top: solid 15px #191970;
+}
+
+.flame12 {
+padding: 1em;
+margin: 2em auto;
+width:100%;
+color: #696969;
+background: #ffe4e1;
+border-top: solid 15px #ffa500;
 }

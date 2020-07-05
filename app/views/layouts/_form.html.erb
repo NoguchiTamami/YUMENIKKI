@@ -15,7 +15,8 @@
 	<p>どんなゆめ？</p>
 	<%= f.text_field :title, class: "field" %>
 	<p>なにがあったの？</p>
-    <%= f.text_area :body,class: "field" %><br>
-    <%= f.submit '投稿する', class: "btn btn-warning col-xs-10" %>
+    <%= f.text_area :body,:placeholder => "例：山に登った" %>
+
+    <%= f.submit '投稿する'%>
     <% end %>
 </div>

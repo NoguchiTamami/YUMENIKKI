@@ -1,14 +1,19 @@
 <div class="hitokoto">
       <span class="hitokoto-circle1">会</span><span class="hitokoto-circle2">情</span>
       <table class='table'>
+        <div class="user-edit-image">
+                  <%= attachment_image_tag user, :profile_image, :fill, 100, 100, class: "img-round",fallback: "girl.png" %>
+                </div>
         <tr>
           <th>お名前</th>
-          <th><%= current_user.name %></th>
+          <th><%= user.name %></th>
         </tr>
         <tr>
           <th>ひとこと</th>
-          <th><%= current_user.name %></th>
+          <th><%= user.introduction %></th>
         </tr>
       </table>
-        <%= link_to "編集する" ,edit_user_path(user), class: "col-xs-10 btn btn-default" %><br><br>
+      <div class="btn-wrap">
+        <%= link_to "編集する" ,edit_user_path(user), class: "btn btn-border-shadow" %><br><br>
+        </div>
     </div>
