@@ -21,10 +21,10 @@
         </nav>
         <nav>
           <ul class="nav navbar-nav navbar-right">
-            <li> <%= link_to 'マイページ', user_path(current_user.id), class: "glyphicon glyphicon-home home" %></li>
-            <li><%= link_to "ユーザー一覧","/users", class: "glyphicon glyphicon-user users" %></li>
-            <li><%= link_to "投稿一覧","/posts", class: "glyphicon glyphicon-book books" %></li>
-            <li><%= link_to "ログアウト",destroy_user_session_path, class: "glyphicon glyphicon-log-out logout",method: :delete %></li>
+            <li> <%= link_to 'マイページ', user_path(current_user.id), class: "btn btn-border-shadow" %></li>
+            <li><%= link_to "ユーザー一覧","/users", class: "btn btn-border-shadow" %></li>
+            <li><%= link_to "投稿一覧","/posts", class: "btn btn-border-shadow" %></li>
+            <li><%= link_to "ログアウト",destroy_user_session_path, class: "glyphicon glyphicon-log-out logout btn btn-border-shadow",method: :delete %></li>
           </ul>
         </nav>
       </div>

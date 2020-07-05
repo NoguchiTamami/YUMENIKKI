@@ -12,16 +12,20 @@
       <table class='table table-hover table-inverse'>
         <thead>
           <tr>
-            <th>٩(ˊᗜˋ*)و</th>
+            <th></th>
+            <th>お名前</th>
             <th>ひとこと</th>
+            <th></th>
             <th colspan="3"></th>
           </tr>
         </thead>
         <tbody>
           <% @users.each do |user| %>
           <tr>
+            <td><%= attachment_image_tag user, :profile_image, class: "img-circle pull-left profile-thumb", fallback: "girl.jpg", size: "50x50" %></td>
             <td><%= user.name %></td>
-            <td><%= link_to 'Show',user_path(user.id) %></td>
+            <td><%= user.introduction %></td>
+            <td><%= link_to 'もっとみる',user_path(user.id) %></td>
           </tr>
           <% end %>
         </tbody>

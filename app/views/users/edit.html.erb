@@ -1,37 +1,43 @@
 <html>
-<body><br><br><br>
-<div class="row">
-	<div class="col-xs-3">
-		<h1>会員情報</h1>
-		<p>email</p>
-       <p><%= current_user.email %></p>
-		<% if @user.errors.any? %>
-		<div id="error_explanation">
-			<h2><%= pluralize(@user.errors.count, "error") %> prohibited
-			this book from being saved:</h2>
-			<ul>
-				<% @user.errors.full_messages.each do |msg|%>
-				<li><%= msg %></li>
+<body><br><br><br><br><br><br>	<div class="mybox5">
+		<div class="row">
+			<div class="col-xs-9">
+				
+				<% if @user.errors.any? %>
+				<div id="error_explanation">
+					<h2><%= pluralize(@user.errors.count, "error") %> prohibited
+					this book from being saved:</h2>
+					<ul>
+						<% @user.errors.full_messages.each do |msg|%>
+						<li><%= msg %></li>
+						<% end %>
+					</ul>
+				</div>
 				<% end %>
-			</ul>
+				<h4>登録されているEmail</h4>
+				<p><%= current_user.email %></p>
+				<%= form_for (@user) do |f| %>
+				<div>
+					<label>お名前</label><br>
+					<%= f.text_field :name %>
+				</div>
+				<div>
+					<label>プロフィール画像を投稿</label>
+					<%= f.attachment_field :profile_image %>
+				</div>
+				<div>
+					<label>ひとこと</label><br>
+					<%= f.text_area :introduction %>
+				</div>
+				<div>
+					<%= f.submit "編集内容を更新する" %>
+				</div>
+				<% end %>
+			</div>
+			<div class="col-xs-3"><br>
+    <%= link_to "パスワードの変更と退会はこちら", edit_user_registration_path(current_user) %>
+  </div>
 		</div>
-		<% end %>
-
-		<%= form_for (@user) do |f| %>
-    <div>
-      <label>Name</label>
-      <!-- <%= f.text_field :name %> -->
-    </div>
-    <div>
-        <label>Image</label>
-    </div>
-    <div>
-    <label>Introduction</label>
-    </div>
-    <div>
-    </div>
-  <% end %>
-	</div>  
-</div>
+	</div>
 </body>
 </html>

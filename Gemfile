@@ -23,6 +23,7 @@ gem "refile", require: "refile/rails", github: 'manfe/refile'
 gem "refile-mini_magick"
 gem 'honoka-rails', '>= 3.3.6.3'
 gem 'pry-byebug'
+gem 'kaminari','~> 1.2.1'
 
 # ---------------------------------------------------------------
 # Use Redis adapter to run Action Cable in production

@@ -18,7 +18,7 @@ def new
   end
 
   def index
-   @posts = Post.all
+   @posts = Post.page(params[:page]).reverse_order
    @post = Post.new
    @user = current_user
  end

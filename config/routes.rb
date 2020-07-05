@@ -5,11 +5,12 @@ Rails.application.routes.draw do
   root  'homes#top'
 
  #Posts Controller
-  resources :posts
+  resources :posts do
+  resource :favorites, only: [:create, :destroy]
+end
   
  #Users Controller
   resources :users, only: [:show, :edit, :update, :index, :new ]
-
 
 
 end
