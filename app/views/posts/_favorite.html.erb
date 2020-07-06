@@ -1,11 +1,11 @@
           <td>
           <% if post.favorited_by?(current_user) %>
-            <%= link_to post_favorites_path(post, redirect_id: 0), method: :delete do %>
-              <span class="glyphicon glyphicon-heart"><%= post.favorites.count%></span>
+            <%= link_to post_favorites_path(post, redirect_id: 0), method: :delete, remote: true do %>
+              <span class="glyphicon glyphicon-star"><%= post.favorites.count%></span>
             <% end %>
           <% else %>
-            <%= link_to post_favorites_path(post, redirect_id: 0), method: :post do %>
-              <span class="glyphicon glyphicon-heart-empty"><%= post.favorites.count %></span>
+            <%= link_to post_favorites_path(post, redirect_id: 0), method: :post, remote: true do %>
+              <span class="glyphicon glyphicon-star-empty"><%= post.favorites.count %></span>
             <% end %>
           <% end %>
         </td>

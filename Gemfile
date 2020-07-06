@@ -24,6 +24,7 @@ gem "refile-mini_magick"
 gem 'honoka-rails', '>= 3.3.6.3'
 gem 'pry-byebug'
 gem 'kaminari','~> 1.2.1'
+gem 'ransack'
 
 # ---------------------------------------------------------------
 # Use Redis adapter to run Action Cable in production
