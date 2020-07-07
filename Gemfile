@@ -25,6 +25,7 @@ gem 'honoka-rails', '>= 3.3.6.3'
 gem 'pry-byebug'
 gem 'kaminari','~> 1.2.1'
 gem 'ransack'
+gem 'font-awesome-sass', '~> 5.4.1'
 
 # ---------------------------------------------------------------
 # Use Redis adapter to run Action Cable in production

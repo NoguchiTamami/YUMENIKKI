@@ -1,5 +1,4 @@
-<br><br><br>
-<div class="container">
+<br><br><div class="container">
 <p id="notice"><%= notice %></p>
 <div class="row">
   <div class="col-xs-4">
@@ -25,7 +24,7 @@
             <td><%= attachment_image_tag user, :profile_image, class: "img-circle pull-left profile-thumb", fallback: "girl.jpg", size: "50x50" %></td>
             <td><%= user.name %></td>
             <td><%= user.introduction %></td>
-            <td><%= link_to '夢をみる',user_path(user.id),class: "btn btn-border-shadow" %></td>
+            <td><%= link_to '夢をみる',user_path(user.id),class: "btn btn-border-shadow aq" %></td>
           </tr>
           <% end %>
           <div class="box20">
