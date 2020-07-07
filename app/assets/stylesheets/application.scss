@@ -15,6 +15,8 @@
  */
 @import "bootstrap-sprockets";
 @import "honoka";
+@import 'font-awesome-sprockets';
+@import 'font-awesome';
 
 
 /**/
@@ -65,7 +67,6 @@ transform: translate(-50%,-50%);
 form {
     display: block;
     width: 80%;
-    padding: 2em;
   }
 
 /**/
@@ -76,6 +77,11 @@ h2 {
     font-family: 'open sans condensed';
     text-align: center
   }
+
+  h1, .h1, h2, .h2, h3, .h3 {
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
 
 /*投稿一覧囲み*/
   .box15 {
@@ -211,12 +217,11 @@ h2 {
   font-family: 'Dodfonts';
 }
 
-/**/
+/*ヘッダー*/
 .mybox2{
 	background: none;
 	border: 1px solid #f3cbd0;	/* 線の太さ・種類・色 */
 	margin: 5px 10px;	/* 外側の余白 上下・左右 */
-	padding: 20px;	/* 内側の余白 */
 	position: relative;
 }
 
@@ -301,7 +306,6 @@ body {
   background-image: url("72521588_p1.png");
   background-repeat: no-repeat;
   background-size: cover;
-    height: 100%;
 }
 
 /*ログイン新規投稿囲み*/
@@ -415,7 +419,7 @@ width: 90%;
 background-color: #fff;
 color: #000;
 border: 5px solid #999;
-border-radius: 3px;s
+border-radius: 3px;
 box-shadow: 0 0 8px #333, 0 0 2px #555 inset;
 }
 
@@ -482,8 +486,6 @@ button.btn {
 
 a.btn-border-shadow {
   padding: calc(1.5rem - 12px) 3rem 1.5rem;
-
-  background: #fff;
 }
 
 a.btn-border-shadow:before {
@@ -521,6 +523,10 @@ background: rgba(255, 245, 238, 0.61);
   z-index: 0;
   width: 60%;
   font-family: 'Dodfonts';
+  margin: auto;
+  text-align: center;
+  height: 70%;
+  vertical-align: middle;
 }
 .mybox5:before{
   background-color: #ef858c;  /* タイトル部分背景色 */
@@ -542,7 +548,7 @@ background: rgba(255, 245, 238, 0.61);
   border-color: #ef858c transparent transparent transparent;  /* 吹き出し三角部分の色 */
   content: "";
   position: absolute;
-  top: 35px;
+  top: px;
   left: 10px;
   width: 0px;
   height: 0px;
@@ -587,6 +593,7 @@ dl.searchbox{
   background-color:#fff;
   border:1px solid #aaa;
   border-radius:6px;
+  margin-top: 21px;
 }
 dl.searchbox dt{
   padding:10px;
@@ -658,4 +665,51 @@ dl.searchbox dd{
 
 .box16 h2{
   font-family: 'Dodfonts';
+}
+
+footer{
+    width: 100%;
+    background-color: #89c7deba;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+    position: absolute;/*←絶対位置*/
+    bottom: 0; /*下に固定*/
+}
+
+.wrapper{
+    min-height: 100vh;
+    position: relative;/*←相対位置*/
+    padding-bottom: 70px;/*←footerの高さ*/
+    box-sizing: border-box;/*←全て含めてmin-height:100vhに*/
+}
+
+.container{
+  width:80%;
+margin-right: auto;
+margin-left : auto;
+}
+
+.red{
+  background: #e65e71;
+}
+
+.w{
+  background: #fff;
+}
+
+.green{
+  background: #7fe07e;
+}
+
+.yellow{
+  background: #f5e389;
+}
+
+.aq{
+  background: #7fffd4;
+}
+
+.red2{
+  color: #e65e71;
 }
