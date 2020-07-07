@@ -13,10 +13,10 @@
 	</div>
 	<% end %>
 	<p>どんなゆめ？</p>
-	<%= f.text_field :title, class: "field" %>
+	<%= f.text_field :title, class: 'col-md-12 book_title' %>
 	<p>なにがあったの？</p>
-    <%= f.text_area :body,:placeholder => "例：山に登った" %>
+    <%= f.text_area :body,:placeholder => "例：山に登った",class: 'col-xs-12 book_body' %>
 
-    <%= f.submit '投稿する'%>
+    <%= f.submit '投稿する', class: "btn btn-border-shadow" %>
     <% end %>
 </div>

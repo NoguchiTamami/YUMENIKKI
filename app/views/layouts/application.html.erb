@@ -6,7 +6,6 @@
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-
 </head>
 <body>
   <% if user_signed_in? %>
@@ -27,6 +26,12 @@
             <li><%= link_to "ログアウト",destroy_user_session_path, class: "glyphicon glyphicon-log-out logout btn btn-border-shadow",method: :delete %></li>
           </ul>
         </nav>
+        <dl class="searchbox">
+         <%= search_form_for @search, url: posts_path do |f| %>
+         <dt><%= f.text_field :title_cont, placeholder: 'どんな夢をお探しですか' %></dt>
+         <dd><%= f.submit ("検索") , class: 'search-btn'%></dd>
+         <% end %>
+        </dl>
       </div>
     </div>
   </header>
