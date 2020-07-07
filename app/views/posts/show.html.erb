@@ -15,8 +15,8 @@
           </h2>
           <p><%= simple_format(@post.body) %></p>
           <%= render :partial => 'posts/favorite', :locals => {:post => @post} %>
-          <%= link_to '編集する', edit_post_path(@post), class: 'btn-sm btn-success' %>
-          <%= link_to '投稿を消去', post_path(@post), method: :delete, class: "btn-sm btn-danger" %>
+          <%= link_to '編集する', edit_post_path(@post), class: "btn btn-border-shadow" %>
+          <%= link_to '投稿を消去', post_path(@post), method: :delete, class: "btn btn-border-shadow" %>
           <div class="mdl-card mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-shadow--2dp">
           </div>
       </div>

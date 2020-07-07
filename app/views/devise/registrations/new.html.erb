@@ -20,7 +20,7 @@
         <div class="field">
           <%= f.label :パスワード %>
           <% if @minimum_password_length %>
-            <em>(<%= @minimum_password_length %> characters minimum)</em>
+            <em>(<%= @minimum_password_length %> 文字以上)</em>
           <% end %><br />
           <%= f.password_field :password, autocomplete: "new-password" %>
         </div>
@@ -30,11 +30,11 @@
         </div>
         <br>
         <div class="actions">
-          <%= f.submit "登録する", class: "btn btn-outline-dark" %>
+          <%= f.submit "登録する", class: "btn btn-border-shadow" %>
         </div>
       <% end %>
       <h4>既に登録済みの方</h4>
-      <%= link_to 'コチラ', new_user_session_path %>からログインしてください
+      <%= link_to 'コチラ', new_user_session_path,class: "btn btn-border-shadow" %>からログインしてください
     </div>
   </div>
 </div>

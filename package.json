@@ -1,5 +1,7 @@
 {
   "name": "YUMENIKKI",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "nes.css": "^2.3.0"
+  }
 }

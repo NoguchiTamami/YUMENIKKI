@@ -12,13 +12,15 @@
   <table class='table table-hover table-inverse'>
     <thead>
       <tr> 
-        <th>どんなゆめ？</th>
+        <th><%= sort_link(@search, :title, 'どんな夢？') %></th>
         <th>なにがおきたの？</th>
+        <th><%= sort_link(@search, :created_at, '作成日時') %></th>
         <th colspan="3"></th>
         <% @posts.each do |post| %>
         <tr>
           <td><%= link_to post.title, post %></td>
           <td><%= post.body %></td>
+          <td><%= post.created_at %></td>
         </tr>
         <% end %>
       </tr>

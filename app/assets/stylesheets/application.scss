@@ -16,6 +16,8 @@
 @import "bootstrap-sprockets";
 @import "honoka";
 
+
+/**/
 .logo {
 	font-size: 40px;
 	bottom: 0;
@@ -23,34 +25,30 @@
 	color: #642020;
 }
 
+/**/
 .i{
 	font-size: 32px;
 	color: #ff69b4;
 }
 
-.gold {
- 	background-color: #ffd700;
- }
-
+/**/
 .i{
 	font-size: 32px;
 	color: #ffb6c1;
 }
 
+/*ヘッダー*/
 .header-box{
 	position: relative;
     top: 0px;                   /* 位置(上0px) */
     left: 0px;                  /* 位置(右0px) */
-    width: 100%;                /* 横幅100%　*/
+    width: 100%;                /* 横幅100%*/
     height: 30px;             /* 縦幅140px */
     z-index: 4;
 }
 
+/**/
 .log-form {
-  width: 40%;
-  min-width: 320px;
-  max-width: 475px;
-  background: #FFD5EC;
   position: absolute;
   top: 60%;
   left: 50%;
@@ -63,12 +61,14 @@ transform: translate(-50%,-50%);
   box-shadow: 0px 2px 5px rgba(0,0,0,.25);
 }
 
+/**/
 form {
     display: block;
     width: 80%;
     padding: 2em;
   }
 
+/**/
 h2 {
     display: block;
     background: FFDBC9;
@@ -77,24 +77,27 @@ h2 {
     text-align: center
   }
 
+/*投稿一覧囲み*/
   .box15 {
     padding: 0.2em 0.5em;
     margin: 2em 0;
     color: #565656;
-    background: #ffeaea;
+    background: #f1e6ace6;
     box-shadow: 0px 0px 0px 10px #ffeaea;
     border: dashed 2px #ffc3c3;
     border-radius: 8px;
 }
 
+/*ユーザー一覧囲み*/
 .box14{
     padding: 0.2em 0.5em;
     margin: 2em 0;
-    background: #d6ebff;
+    background: #d6ebffe3;
     box-shadow: 0px 0px 0px 10px #d6ebff;
     border: dashed 2px white;
 }
 
+/**/
 .box18{
     margin:2em 0;
     position: relative;
@@ -120,11 +123,12 @@ h2 {
     right:-12px;
 }
 
+/*会員ページ囲み*/
 .box23 {
     position: relative;
     margin: 2em 0 2em 40px;
     padding: 8px 15px;
-    background: #fff0c6;
+    background: #fff0c6e3;
     border-radius: 30px;
 }
 .box23:before{font-family: FontAwesome;
@@ -145,14 +149,28 @@ h2 {
     color: #fff0c6;
 }
 
+/*新規投稿囲み*/
 .mybox{
-	background-color: #F6D4D8;  /* 背景色 */
+	background-color: #eca1f5bf;  /* 背景色 */
 	border-radius: 5px;
 	margin: 20px 5px; /* 外側の余白 上下・左右 */
 	padding: 30px 20px 20px 20px; /* 内側の余白 上・右・下・左 */
 	position: relative;
 	z-index: 0;
+  color: #333333d4;
 }
+
+.mybox p{
+ font-family: 'Dodfonts';
+}
+
+@font-face {
+  font-family: 'Dodfonts';
+  src: asset_url('PixelMplus12-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .mybox:before{
 	border: 1px solid #fff; /* 白い実線 */
 	border-radius: 5px;
@@ -167,7 +185,7 @@ h2 {
 	z-index: -1;
 }
 .mybox:after{
-	background-color: rgba(249,223,213,0.9);  /* マステ背景色 */
+	background-color: #a8cfeabf;  /* マステ背景色 */
 	background-image: radial-gradient(#fff 20%, transparent 0), radial-gradient(#fff 20%, transparent 0); /* 水玉の色 */
 	background-position: 0 0, 8px 8px;  /* 水玉の距離 */
 	background-size: 15px 15px; /* 水玉の大きさ */
@@ -175,6 +193,7 @@ h2 {
 	border-right: 2px dotted rgba(0,0,0,0.1);
 	box-shadow: 0 0 5px rgba(0,0,0,0.2);
 	content: '新規投稿';
+  font-family: 'Dodfonts';
 	display: block;
 	padding: 5px 20px;  
 	text-align: center;
@@ -187,6 +206,12 @@ h2 {
 	-o-transform: rotate(-3deg);
 }
 
+/**/
+.nav {
+  font-family: 'Dodfonts';
+}
+
+/**/
 .mybox2{
 	background: none;
 	border: 1px solid #f3cbd0;	/* 線の太さ・種類・色 */
@@ -206,12 +231,20 @@ h2 {
 	z-index: -1;
 }
 
+/*投稿詳細囲み*/
 .mybox3{
-    border: 2px dotted #EAA8BF; /* 線の太さ・種類・色 */
+    font-family: 'Dodfonts';
+    border: 4px dotted #bed008; /* 線の太さ・種類・色 */
     margin: 30px 20px;  /* 外側の余白 上下・左右 */
     padding: 15px 20px; /* 内側の余白 上下・左右 */
     position: relative;
+    background: #a8eadfd6;
 }
+
+.mybox3 h2{
+  font-family: 'Dodfonts';
+}
+
 .mybox3:before{
     content: '＊';
     color: #fff;    /* 左上の花の色 */
@@ -224,7 +257,7 @@ h2 {
     -moz-transform: rotate(20deg);
     -webkit-transform: rotate(20deg); 
     -o-transform: rotate(20deg);
-    text-shadow:  0 0 8px #eaa8bf, 0 0 6px #eaa8bf, 0 0 4px #eaa8bf, 0 0 2px #eaa8bf, 0 0 0.5px #eaa8bf;    /* 左上の花の縁取りの色 */
+    text-shadow:  0 0 8px #a8c0ea, 0 0 6px #a8b3ea, 0 0 4px #eaa8bf, 0 0 2px #eaa8bf, 0 0 0.5px #eaa8bf;    /* 左上の花の縁取りの色 */
 }
 .mybox3:after{
     content: '*';
@@ -238,10 +271,12 @@ h2 {
     -moz-transform: rotate(20deg);
     -webkit-transform: rotate(20deg); 
     -o-transform: rotate(20deg);
-    text-shadow:  0 0 8px #eaa8bf, 0 0 6px #eaa8bf, 0 0 4px #eaa8bf, 0 0 2px #eaa8bf, 0 0 0.5px #eaa8bf;    /* 右下の花の縁取りの色 */
+    text-shadow:  0 0 8px #a8c0ea, 0 0 6px #a8b3ea, 0 0 4px #eaa8bf, 0 0 2px #eaa8bf, 0 0 0.5px #eaa8bf;    /* 右下の花の縁取りの色 */
 }
 
+/**/
 .fashionable-box4{
+  font-family: 'Dodfonts';
   margin: 1em 0;
   padding: 1em;
   background-size: 20px 20px;
@@ -252,28 +287,46 @@ h2 {
 }
 
 .fashionable-box4 p{
+  font-family: 'Dodfonts';
   margin: 0;
   padding: 0;
 }
 
-body {
+.fashionable-box4 h1{
+  font-family: 'Dodfonts';
+}
 
-  background-image: url("memphis-colorful.png");
+/**/
+body {
+  background-image: url("72521588_p1.png");
   background-repeat: no-repeat;
   background-size: cover;
     height: 100%;
 }
 
+/*ログイン新規投稿囲み*/
 .flame08 {
+font-family: 'Dodfonts';
 padding: 1em;
 margin: 2em auto;
-color: #696969;
+color: #d4d1d1;
 width:100%;
-background: #fffafa;
-border-left: double 8px #20b2aa;
-border-right: double 8px #20b2aa;
+background: #333030fa;
+border-left: double 8px #795a71;
+border-right: double 8px #91789e;
+border-radius: 10px;
+
 }
 
+.flame08 h2 {
+  font-family: 'Dodfonts';
+}
+
+.flame08 h4 {
+  font-family: 'Dodfonts';
+}
+
+/*会員情報囲み*/
 .hitokoto{
   background: rgba(215, 253, 205, 0.61);
   margin: 2em 0;
@@ -353,6 +406,7 @@ border-right: double 8px #20b2aa;
   padding: 0;
 }
 
+/**/
 .box {
 position: relative;
 margin: 10px auto;
@@ -361,7 +415,7 @@ width: 90%;
 background-color: #fff;
 color: #000;
 border: 5px solid #999;
-border-radius: 3px;
+border-radius: 3px;s
 box-shadow: 0 0 8px #333, 0 0 2px #555 inset;
 }
 
@@ -386,6 +440,7 @@ border: solid 3px #333;
 transform: rotate(8deg);
 }
 
+/**/
 *,
 *:before,
 *:after {
@@ -399,11 +454,11 @@ html {
   font-size: 62.5%;
 }
 
-
-
+/*ボタン全般*/
 .btn,
 a.btn,
 button.btn {
+  font-family: 'Dodfonts';
   font-size: 1.6rem;
   font-weight: 700;
   line-height: 1.5;
@@ -456,6 +511,7 @@ a.btn-border-shadow:hover:before {
   left: 0;
 }
 
+/*ユーザー編集囲み*/
 .mybox5{
 background: rgba(255, 245, 238, 0.61);
   border: 1px solid #ef858c;  /* 線の太さ・種類・色 */
@@ -463,6 +519,8 @@ background: rgba(255, 245, 238, 0.61);
   padding: 45px 10px 10px 10px; /* 内側の余白 上・右・左・下 */
   position: relative;
   z-index: 0;
+  width: 60%;
+  font-family: 'Dodfonts';
 }
 .mybox5:before{
   background-color: #ef858c;  /* タイトル部分背景色 */
@@ -491,20 +549,113 @@ background: rgba(255, 245, 238, 0.61);
   z-index: 1;
 }
 
+/*警告夢囲み*/
 .flame11 {
+font-family: 'Dodfonts';
 padding: 1em;
 margin: 2em auto;
 width:100%;
-color: #696969;
-background: #f0ffff;
-border-top: solid 15px #191970;
+color: #f3f3f3;
+background: #010e0ead;
+border-top: solid 15px #3b4c5f;
 }
 
+.flame11 h3{
+font-family: 'Dodfonts';
+}
+
+/*縁起夢囲み*/
 .flame12 {
+font-family: 'Dodfonts';
 padding: 1em;
 margin: 2em auto;
 width:100%;
-color: #696969;
-background: #ffe4e1;
-border-top: solid 15px #ffa500;
+color: #f5efef;
+background: #f96275d6;
+border-top: solid 15px #fbab58db;
+}
+
+.flame12 h3{
+font-family: 'Dodfonts';
+}
+
+/* 検索ボックス */
+dl.searchbox{
+  width: 350px;
+  height: 40px;
+  position:relative;
+  background-color:#fff;
+  border:1px solid #aaa;
+  border-radius:6px;
+}
+dl.searchbox dt{
+  padding:10px;
+}
+dl.searchbox dt input{
+  width:70%;
+  height:30px;
+  line-height:30px;
+  background:none;
+  border:none;
+}
+dl.searchbox dd{
+  position:absolute;
+  top:1px;
+  right:1px;
+  width:30%;
+}
+.search-btn{
+  display:block;
+  background:#5fad35;
+  width:100%;
+  height:36px;
+  line-height:36px;
+  border:none;
+  border-radius: 0 6px 6px 0;
+  color:#FFF;
+}
+
+.search-btn:hover {
+  background:#228B22;
+}
+
+/*ページネーション枠*/
+.box20 {
+  text-align: center;
+  font-size: 18px;
+}
+
+/*ページネーション自体のデザイン*/
+.pagination>li>a {          
+  background: #e6e6fa00;
+  border: none;     /*枠線をなくす*/
+  color: #696969;   /*文字の色を変える*/
+}
+
+/* 表示しているページ番号のデザイン */
+.pagination>.active>a {     
+  background: #93c9ff;     /*背景の色を変える*/
+  border-radius: 15px;     /*角を丸くする*/
+}
+
+/*ホバー時のデザイン*/
+.pagination>li>a:hover {        
+  border-radius: 15px;    /*角を丸くする*/
+}
+
+/*投稿編集囲み*/
+.box16 {
+    padding: 0.2em 0.5em;
+    margin: 2em 0;
+    color: #565656;
+    background: #86b6b994;
+    box-shadow: 0px 0px 0px 10px #a5a5debd;
+    border: dashed 2px #ad4672;
+    border-radius: 8px;
+    font-family: 'Dodfonts';
+    width: 50%;
+}
+
+.box16 h2{
+  font-family: 'Dodfonts';
 }

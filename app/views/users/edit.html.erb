@@ -1,7 +1,7 @@
 <html>
-<body><br><br><br><br><br><br>	<div class="mybox5">
+<body><br><br><br><br><br><br>	
+	<div class="mybox5">
 		<div class="row">
-			<div class="col-xs-9">
 				
 				<% if @user.errors.any? %>
 				<div id="error_explanation">
@@ -14,8 +14,10 @@
 					</ul>
 				</div>
 				<% end %>
-				<h4>登録されているEmail</h4>
-				<p><%= current_user.email %></p>
+				<div>
+				  <p>登録されているEmail</p>
+				  <p><%= current_user.email %></p>
+			    </div>
 				<%= form_for (@user) do |f| %>
 				<div>
 					<label>お名前</label><br>
@@ -32,11 +34,8 @@
 				<div>
 					<%= f.submit "編集内容を更新する" %>
 				</div>
-				<% end %>
-			</div>
-			<div class="col-xs-3"><br>
-    <%= link_to "パスワードの変更と退会はこちら", edit_user_registration_path(current_user) %>
-  </div>
+				<% end %><br>
+                <%= link_to "パスワードの変更と退会はこちら", edit_user_registration_path(current_user),class: "btn btn-border-shadow" %>
 		</div>
 	</div>
 </body>

@@ -1,7 +1,9 @@
 <br><<br><br>
+<div class="box16">
 
-<h1>夢の内容を編集する</h1>
+<h2>夢の内容を編集する</h2>
 <%= render :partial => 'layouts/postform', :locals => {:post => @post}%>
 
-<%= link_to '詳細ページに戻る', @post %> |
-<%= link_to '一覧に戻る', posts_path %>
+<%= link_to '詳細ページに戻る', @post ,class: "btn btn-border-shadow"%> |
+<%= link_to '一覧に戻る', posts_path,class: "btn btn-border-shadow" %>
+</div>

@@ -8,25 +8,29 @@
       </div>
       <div class="col-xs-8">
         <div class="box15">
-          <h1>投稿された夢</h1>
+          <h1>みんなが投稿した夢</h1>
           <table class='table table-hover table-inverse'>
             <thead>
               <tr>
                 <th></th>
-                <th>どんな夢？</th>
+                <th><%= sort_link(@search, :title, 'どんな夢？') %></th>
                 <th>何をしたの？</th>
+                <th><%= sort_link(@search, :created_at, '作成日時') %></th>
               </tr>
             </thead>
             <tbody>
-              <% @posts.each do |post| %>
+              <% @search_posts.each do |post| %>
               <tr>
                 <td><%= link_to user_path(post.user) do %>
                   <%= attachment_image_tag post.user, :profile_image,  class: "img-circle pull-left profile-thumb", fallback: "girl.jpg", size: "50x50" %><% end %></td>
                 <td><%= link_to post.title, post %></td>
                 <td><%= simple_format(post.body) %></td>
+                <td><%= post.created_at %></td>
               </tr>
               <% end %>
+              <div class="box20">
               <%= paginate @posts %>
+            </div>
             </tbody>
           </table><br>
         </div>
