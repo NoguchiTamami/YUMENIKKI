@@ -49,7 +49,7 @@
     z-index: 4;
 }
 
-/**/
+/*ログインフォーム外周*/
 .log-form {
   position: absolute;
   top: 60%;
@@ -89,9 +89,13 @@ h2 {
     margin: 2em 0;
     color: #565656;
     background: #f1e6ace6;
-    box-shadow: 0px 0px 0px 10px #ffeaea;
-    border: dashed 2px #ffc3c3;
+    box-shadow: 0px 0px 0px 10px #efcdb9;
+    border: dashed 2px #de9105;
     border-radius: 8px;
+}
+
+ .box15  h1{
+    font-family: 'Dodfonts';
 }
 
 /*ユーザー一覧囲み*/
@@ -101,6 +105,10 @@ h2 {
     background: #d6ebffe3;
     box-shadow: 0px 0px 0px 10px #d6ebff;
     border: dashed 2px white;
+}
+
+.box14  h1{
+    font-family: 'Dodfonts';
 }
 
 /**/
@@ -155,6 +163,10 @@ h2 {
     color: #fff0c6;
 }
 
+.box23 h1{
+  font-family: 'Dodfonts';
+}
+
 /*新規投稿囲み*/
 .mybox{
 	background-color: #eca1f5bf;  /* 背景色 */
@@ -172,7 +184,7 @@ h2 {
 
 @font-face {
   font-family: 'Dodfonts';
-  src: asset_url('PixelMplus12-Regular.ttf') format('truetype');
+  src: asset_url('puikko-Regular.otf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -201,7 +213,7 @@ h2 {
 	content: '新規投稿';
   font-family: 'Dodfonts';
 	display: block;
-	padding: 5px 20px;  
+	padding: 5px 20px;
 	text-align: center;
 	position: absolute;
 	top: -10px;
@@ -226,7 +238,7 @@ h2 {
 }
 
 .mybox2:after{
-	background: repeating-linear-gradient(-45deg, #f5d5da, #f5d5da 5px, #fcf0f1 0, #fcf0f1 10px); /* ストライプの色 */
+	background: repeating-linear-gradient(-45deg, #f5d5da, #f5d5da 5px, #fcf0f1 0, #fcf0f1 10px);
 	content: '';
 	position: absolute;
 	top: 5px;
@@ -555,9 +567,16 @@ background: rgba(255, 245, 238, 0.61);
   z-index: 1;
 }
 
+@font-face {
+  font-family: 'Dod';
+  src: asset_url('PixelMplus12-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /*警告夢囲み*/
 .flame11 {
-font-family: 'Dodfonts';
+font-family: 'Dod';
 padding: 1em;
 margin: 2em auto;
 width:100%;
@@ -572,7 +591,7 @@ font-family: 'Dodfonts';
 
 /*縁起夢囲み*/
 .flame12 {
-font-family: 'Dodfonts';
+font-family: 'Dod';
 padding: 1em;
 margin: 2em auto;
 width:100%;
@@ -673,7 +692,6 @@ footer{
     color: #fff;
     text-align: center;
     padding: 30px 0;
-    position: absolute;/*←絶対位置*/
     bottom: 0; /*下に固定*/
 }
 

@@ -26,6 +26,7 @@ gem 'pry-byebug'
 gem 'kaminari','~> 1.2.1'
 gem 'ransack'
 gem 'font-awesome-sass', '~> 5.4.1'
+gem 'acts-as-taggable-on', '~> 6.0'
 
 # ---------------------------------------------------------------
 # Use Redis adapter to run Action Cable in production
