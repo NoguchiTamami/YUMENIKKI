@@ -1,31 +1,32 @@
 <br><br><div class="container">
-<p id="notice"><%= notice %></p>
-<div class="row">
+ <p id="notice"><%= notice %></p>
+ <div class="row">
   <div class="col-xs-4">
-  <%= render :partial => 'layouts/userform', :locals => {:user => @user}%>
+   <%= render :partial => 'layouts/userform', :locals => {:user => @user}%>
    <%= render :partial => 'layouts/form', :locals => {:post => @post}%>
- </div>
-<div class="col-xs-8">
-<div class="box23">
-  <h1><%= @user.name %>のみた夢</h1>
-  <table class='table table-hover table-inverse'>
-    <thead>
+  </div>
+  <div class="col-xs-8">
+   <div class="box23">
+    <h1 class="text-center"><%= @user.name %>のみた夢</h1>
+    <table class='table table-hover table-inverse'>
+     <thead>
       <tr> 
-        <th><%= sort_link(@search, :title, 'どんな夢？') %></th>
-        <th>なにがおきたの？</th>
-        <th><%= sort_link(@search, :created_at, '作成日時') %></th>
-        <th colspan="3"></th>
-        <% @posts.each do |post| %>
-        <tr>
-          <td><%= link_to post.title, post %></td>
-          <td><%= post.body %></td>
-          <td><%= post.created_at %></td>
-        </tr>
-        <% end %>
+       <th><%= sort_link(@search, :title, 'どんな夢？') %></th>
+       <th>なにがおきたの？</th>
+       <th><%= sort_link(@search, :created_at, '投稿日') %></th>
+       <th>タグ</th>
+       <% @posts.each do |post| %>
+       <tr>
+        <td><%= link_to post.title, post %></td>
+        <td><%= simple_format(post.body) %></td>
+        <td><%= time_ago_in_words(post.created_at) %>前</td>
+        <td><%= post.tag_list %></td>
+       </tr>
+       <% end %>
       </tr>
-    </thead>
-  </table><br>
-</div>
-</div>
-</div>
+     </thead>
+    </table><br>
+   </div>
+  </div>
+ </div>
 </div>

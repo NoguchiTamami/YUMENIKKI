@@ -10,17 +10,19 @@
     </div>
     <div class="col-xs-8">
       <div class="mybox3">
-          <h2 >
+          <h2 class="text-center">
             <%= @post.title %>
           </h2>
-          <p><%= simple_format(@post.body) %></p>
-          <%= link_to '編集する', edit_post_path(@post), class: "btn btn-border-shadow yellow" %>
-          <%= link_to '投稿を消去', post_path(@post), method: :delete, class: "btn btn-border-shadow red" %>
+          <tr>
+          <th><%= simple_format(@post.body) %></th>
+          <th><%= time_ago_in_words(@post.created_at) %>前に投稿<th>
+          <th><%= link_to '編集する', edit_post_path(@post), class: "btn btn-border-shadow yellow" %></th>
+          <th><%= link_to '投稿を消去', post_path(@post), method: :delete, class: "btn btn-border-shadow red" %></th>
+          <tr>
           <div class="post_<%= @post.id %> btn">
           <%= render :partial => 'posts/favorite', :locals => {:post => @post} %>
           </div>
-          <div class="mdl-card mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-shadow--2dp">
-          </div>
+          <p>tags: <%= raw(@post.tag_list.map { |t| link_to t, tag_path(t) }.join(',')) %></p>
       </div>
       <div class="flame11">
         見るとちょっと危険かも？<h3>警告夢とは</h3>

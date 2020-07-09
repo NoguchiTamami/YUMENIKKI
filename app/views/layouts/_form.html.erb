@@ -1,22 +1,25 @@
 <div class="mybox">
 	<%= form_for(post) do |f| %>
-	<% if post.errors.any? %>
-	<div id="error_explanation">
-		<h2>
-	    <%= pluralize(post.errors.count, "error") %> prohibited
-		this book from being saved:</h2>
-		<ul>
-			<% post.errors.full_messages.each do |msg|%>
-			<li><%= msg %></li>
-			<% end %>
-		</ul>
-	</div>
-	<% end %>
-	<p>どんなゆめ？</p>
-	<%= f.text_field :title, class: 'col-md-12 book_title' %>
-	<p>なにがあったの？</p>
-    <%= f.text_area :body,:placeholder => "例：山に登った",class: 'col-xs-12 book_body' %>
+	  <% if post.errors.any? %>
+	    <div id="error_explanation">
+		    <h2>
+			    <%= pluralize(post.errors.count, "error") %> prohibited
+		      this book from being saved:
+		    </h2>
+		    <ul>
+			    <% post.errors.full_messages.each do |msg|%>
+			    <li><%= msg %></li>
+			    <% end %>
+		    </ul>
+	    </div>
+	  <% end %>
 
-    <%= f.submit '投稿する', class: "btn btn-border-shadow" %>
-    <% end %>
+	  <p>どんなゆめ</p>
+	    <%= f.text_field :title, class: 'col-md-12 book_title' %>
+	  <p>なにがあったの？</p>
+	    <%= f.text_area :body,:placeholder => "例：山に登った",class: 'col-xs-12 book_body' %>
+	  <p>タグをつける</p>
+	    <%= f.text_field :tag_list %>
+      <%= f.submit '投稿する', class: "btn btn-border-shadow" %>
+ <% end %>
 </div>

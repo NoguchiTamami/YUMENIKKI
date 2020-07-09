@@ -8,14 +8,15 @@
       </div>
       <div class="col-xs-8">
         <div class="box15">
-          <h1>みんなが投稿した夢</h1>
+          <h1 class="text-center">みんなが投稿した夢</h1>
           <table class='table table-hover table-inverse'>
             <thead>
               <tr>
                 <th></th>
                 <th><%= sort_link(@search, :title, 'どんな夢？') %></th>
                 <th>何をしたの？</th>
-                <th><%= sort_link(@search, :created_at, '作成日時') %></th>
+                <th><%= sort_link(@search, :created_at, '投稿日') %></th>
+                <th>タグ</th>
               </tr>
             </thead>
             <tbody>
@@ -25,7 +26,8 @@
                   <%= attachment_image_tag post.user, :profile_image,  class: "img-circle pull-left profile-thumb", fallback: "girl.jpg", size: "50x50" %><% end %></td>
                 <td><%= link_to post.title, post %></td>
                 <td><%= simple_format(post.body) %></td>
-                <td><%= post.created_at %></td>
+                <td><%= time_ago_in_words(post.created_at) %>前</td>
+                <td><%= post.tag_list %></td>
               </tr>
               <% end %>
               <div class="box20">

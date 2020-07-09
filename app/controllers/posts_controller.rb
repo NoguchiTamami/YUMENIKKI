@@ -1,7 +1,6 @@
 class PostsController < ApplicationController
 
-
-def new
+  def new
     @post = Post.new
   end
 
@@ -18,44 +17,43 @@ def new
   end
 
   def index
-   @posts = Post.page(params[:page]).reverse_order
    @post = Post.new
    @user = current_user
- end
+   @posts = Post.page(params[:page]).reverse_order
+  end
 
- def show
+  def show
    @post_new = Post.new
    @post = Post.find(params[:id])
    @user = @post.user
- end
-
- def edit
-  @post = Post.find(params[:id])
-  unless current_user.id == @post.user.id
-    redirect_to posts_path
   end
-  @user = current_user
-end
 
-def update
- @post = Post.find(params[:id])
- if @post.update(post_params)
-  redirect_to post_path(@post), notice: 'Post was successfully created.'
-else
- render action: :edit
-end
-end
+  def edit
+   @post = Post.find(params[:id])
+   unless current_user.id == @post.user.id
+   redirect_to posts_path
+   end
+   @user = current_user
+  end
+
+  def update
+   @post = Post.find(params[:id])
+   if @post.update(post_params)
+   redirect_to post_path(@post), notice: 'Post was successfully created.'
+   else
+   render action: :edit
+   end
+  end
 
 
-def destroy
-  @post = Post.find(params[:id])
-  @post.destroy 
-  redirect_to posts_path 
-end
+  def destroy
+   @post = Post.find(params[:id])
+   @post.destroy
+   redirect_to posts_path
+  end
 
-private
-def post_params
-  params.require(:post).permit(:title, :body)
-end
-
+  private
+  def post_params
+   params.require(:post).permit(:title, :body, :tag_list)
+  end
 end
