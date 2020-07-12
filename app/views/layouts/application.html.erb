@@ -10,7 +10,7 @@
 <body>
   <% if user_signed_in? %>
   <header header class="header-box">
-    <div class="mybox2">
+    <div class="header-box2">
     <div class="container">
         <nav class="nav navbar-nav navbar-left">
           <span class="logo">夢日記
@@ -60,15 +60,5 @@
   </header>
   <% end %>
     <%= yield %>
-
-  <footer>
-    <div class='footerbox'>
-    <div class='container'>
-          <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        </div>
-      </div>
-    </div>
-  </div>
-  </footer>
 </body>
 </html>

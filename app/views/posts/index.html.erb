@@ -7,7 +7,7 @@
         <%= render :partial => 'layouts/form', :locals => {:post => @post}%>
       </div>
       <div class="col-xs-8">
-        <div class="box15">
+        <div class="postindexbox">
           <h1 class="text-center">みんなが投稿した夢</h1>
           <table class='table table-hover table-inverse'>
             <thead>
@@ -27,10 +27,11 @@
                 <td><%= link_to post.title, post %></td>
                 <td><%= simple_format(post.body) %></td>
                 <td><%= time_ago_in_words(post.created_at) %>前</td>
-                <td><%= post.tag_list %></td>
+                <!-- 要修正 -->
+                <td><%= raw(post.tag_list.map { |t| link_to t, tag_path(t) }.join(', ')) %></td>
               </tr>
               <% end %>
-              <div class="box20">
+              <div class="pagebox">
               <%= paginate @posts %>
             </div>
             </tbody>

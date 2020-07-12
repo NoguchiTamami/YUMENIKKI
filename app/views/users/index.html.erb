@@ -6,7 +6,7 @@
    <%= render :partial => 'layouts/form', :locals => {:post => @post}%>
  </div>
   <div class="col-xs-8">
-    <div class="box14">
+    <div class="userindexbox">
       <h1 class="text-center">おともだち</h1>
       <table class='table table-hover table-inverse'>
         <thead>
@@ -27,7 +27,7 @@
             <td><%= link_to '夢をみる',user_path(user.id),class: "btn btn-border-shadow aq" %></td>
           </tr>
           <% end %>
-          <div class="box20">
+          <div class="pagebox">
               <%= paginate @users %>
             </div>
         </tbody>

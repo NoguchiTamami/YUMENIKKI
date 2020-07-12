@@ -9,7 +9,7 @@
       <%= render :partial => 'layouts/form', :locals => {:post => @post}%>
     </div>
     <div class="col-xs-8">
-      <div class="mybox3">
+      <div class="postdetailbox">
           <h2 class="text-center">
             <%= @post.title %>
           </h2>
@@ -22,14 +22,15 @@
           <div class="post_<%= @post.id %> btn">
           <%= render :partial => 'posts/favorite', :locals => {:post => @post} %>
           </div>
+          <!-- 要修正 -->
           <p>tags: <%= raw(@post.tag_list.map { |t| link_to t, tag_path(t) }.join(',')) %></p>
       </div>
-      <div class="flame11">
+      <div class="detail1">
         見るとちょっと危険かも？<h3>警告夢とは</h3>
         悪夢は不吉なことの予兆と言われることがあります<br>
         怖い夢を見たら普段の行動を省みたり、新しいことなどをはじめてみましょう<br>
       </div>
-      <div class="flame12">
+      <div class="detail2">
         見るとラッキー！<h3>縁起のいい夢</h3>
         皆さんも一度は聞いたことがあるであろう「一富士二鷹三茄子」<br>
         実は続きがあるのご存知でしたか？<br>
