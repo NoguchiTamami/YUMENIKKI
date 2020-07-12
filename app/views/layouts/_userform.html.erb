@@ -1,5 +1,5 @@
-<div class="hitokoto">
-      <span class="hitokoto-circle1">会</span><span class="hitokoto-circle2">情</span>
+<div class="userbox">
+      <span class="userbox-circle1">会</span><span class="userbox-circle2">情</span>
       <table class='table'>
         <div class="user-edit-image">
                   <%= attachment_image_tag user, :profile_image, class: "img-round",fallback: "girl.jpg",size: "100x100" %>
@@ -14,6 +14,6 @@
         </tr>
       </table>
       <div class="btn-wrap">
-        <%= link_to "編集する" ,edit_user_path(user), class: "btn btn-border-shadow green" %><br><br>
+        <%= link_to "マイページ編集" ,edit_user_path(user), class: "btn btn-border-shadow green" %><br><br>
         </div>
     </div>
