@@ -1,8 +1,4 @@
-<html>
-<body><br><br><br><br><br><br>	
 	<div class="usereditbox">
-		<div class="row"><br><br>
-				
 				<% if @user.errors.any? %>
 				<div id="error_explanation">
 					<h2><%= pluralize(@user.errors.count, "error") %> prohibited
@@ -20,13 +16,13 @@
 			    </div>
 				<%= form_for (@user) do |f| %>
 				<div>
-					<label>お名前</label><br>
+					<label>お名前</label>
 					<%= f.text_field :name %>
-				</div>
+				</div><br>
 				<div>
 					<label>プロフィール画像を投稿</label>
 					<%= f.attachment_field :profile_image %>
-				</div>
+				</div><br>
 				<div>
 					<label>ひとこと</label><br>
 					<%= f.text_area :introduction %>
@@ -35,8 +31,5 @@
 					<%= f.submit "編集内容を更新する" %>
 				</div>
 				<% end %><br>
-                <%= link_to "パスワードの変更と退会はこちら", edit_user_registration_path(current_user),class: "btn btn-border-shadow" %>
-		</div>
+                <%= link_to "パスワードの変更と退会はこちら", edit_user_registration_path(current_user),class: "btn btn-border-shadow" %> 
 	</div>
-</body>
-</html>

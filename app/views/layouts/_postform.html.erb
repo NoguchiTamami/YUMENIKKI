@@ -21,6 +21,11 @@
   <%= form.text_area :body,:placeholder => "例：山に登った" %>
 </div>
 
+<div class="field">
+  <%= form.label :タグを編集する %><br>
+  <%= form.text_field :tag_list %>
+</div>
+
 <div class="actions">
   <%= form.submit %>
 </div>

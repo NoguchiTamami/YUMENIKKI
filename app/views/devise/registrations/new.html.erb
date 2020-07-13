@@ -1,38 +1,36 @@
-<div class="log-form">
-    <div class="flame08">
-      <h2 >会員登録</h2>
-      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-      <%= render "devise/shared/error_messages", resource: resource %>
+<div class="flame08">
+  <h2 >会員登録</h2>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
 
-      <div class="field">
-       <%= f.label :お名前 %><br />
-       <%= f.text_field :name %>
-     </div>
-     <div class="field">
-       <%= f.label :ひとこと %> <br />
-       <%= f.text_field :introduction %>
-     </div>
-     <div class="field">
-      <%= f.label :email %><br />
-      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-    </div>
-    <div class="field">
-      <%= f.label :パスワード %>
-      <% if @minimum_password_length %>
-      <em>(<%= @minimum_password_length %> 文字以上)</em>
-      <% end %><br />
-      <%= f.password_field :password, autocomplete: "new-password" %>
-    </div>
-    <div class="field">
-      <%= f.label :確認用パスワード %><br />
-      <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-    </div>
-    <br>
-    <div class="actions">
-      <%= f.submit "登録する", class: "btn btn-border-shadow" %>
-    </div>
-    <% end %>
-    <h4>既に登録済みの方</h4>
-    <%= link_to 'コチラ', new_user_session_path,class: "btn btn-border-shadow" %>からログインしてください
+  <div class="field">
+     <%= f.label :お名前 %><br />
+     <%= f.text_field :name, class: "black" %>
   </div>
+  <div class="field">
+     <%= f.label :ひとこと %> <br />
+     <%= f.text_field :introduction, class: "black" %>
+  </div>
+  <div class="field">
+     <%= f.label :email %><br />
+     <%= f.email_field :email, autofocus: true,class: "black", autocomplete: "email" %>
+  </div>
+  <div class="field">
+     <%= f.label :パスワード %>
+     <% if @minimum_password_length %>
+     <em>(<%= @minimum_password_length %> 文字以上)</em>
+     <% end %><br />
+      <%= f.password_field :password,class: "black", autocomplete: "new-password" %>
+  </div>
+  <div class="field">
+     <%= f.label :確認用パスワード %><br />
+     <%= f.password_field :password_confirmation,class: "black", autocomplete: "new-password" %>
+  </div>
+  <br>
+  <div class="actions">
+     <%= f.submit "登録する", class: "btn btn-border-shadow" %>
+  </div>
+  <% end %>
+  <h4>既に登録済みの方</h4>
+  <%= link_to 'コチラ', new_user_session_path,class: "btn btn-border-shadow w" %>からログインしてください
 </div>
