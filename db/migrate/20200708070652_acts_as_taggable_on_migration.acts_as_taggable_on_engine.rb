@@ -5,7 +5,7 @@ else
   class ActsAsTaggableOnMigration < ActiveRecord::Migration; end
 end
 ActsAsTaggableOnMigration.class_eval do
-  def self.up
+  def change
     create_table ActsAsTaggableOn.tags_table do |t|
       t.string :name
       t.timestamps
@@ -28,10 +28,5 @@ ActsAsTaggableOnMigration.class_eval do
 
     add_index ActsAsTaggableOn.taggings_table, :tag_id
     add_index ActsAsTaggableOn.taggings_table, [:taggable_id, :taggable_type, :context], name: 'taggings_taggable_context_idx'
-  end
-
-  def self.down
-    drop_table ActsAsTaggableOn.taggings_table
-    drop_table ActsAsTaggableOn.tags_table
   end
 end
