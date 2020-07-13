@@ -39,30 +39,6 @@
 	color: #ffb6c1;
 }
 
-/*ヘッダー*/
-.header-box{
-	position: relative;
-    top: 0px;                   /* 位置(上0px) */
-    left: 0px;                  /* 位置(右0px) */
-    width: 100%;                /* 横幅100%*/
-    height: 30px;             /* 縦幅140px */
-    z-index: 4;
-}
-
-/*ログインフォーム外周*/
-.log-form {
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  -webkit-transform: translate(-50%,-50%);
--moz-transform: translate(-50%,-50%);
--o-transform: translate(-50%,-50%);
--ms-transform: translate(-50%,-50%);
-transform: translate(-50%,-50%);
-
-  box-shadow: 0px 2px 5px rgba(0,0,0,.25);
-}
-
 /**/
 form {
     display: block;
@@ -230,10 +206,18 @@ h2 {
 }
 
 /*ヘッダー*/
+.header-box{
+  position: relative;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 4;
+}
+
 .header-box2{
 	background: none;
-	border: 1px solid #f3cbd0;	/* 線の太さ・種類・色 */
-	margin: 5px 10px;	/* 外側の余白 上下・左右 */
+	border: 1px solid #f3cbd0;
+	margin: 5px 10px;
 	position: relative;
 }
 
@@ -323,11 +307,11 @@ body {
 
 /*ログイン新規投稿囲み*/
 .flame08 {
+position: absolute;
 font-family: 'Dodfonts';
 padding: 1em;
-margin: 2em auto;
+margin: 2em 4em;
 color: #d4d1d1;
-width:100%;
 background: #333030fa;
 border-left: double 8px #795a71;
 border-right: double 8px #91789e;
@@ -528,13 +512,13 @@ a.btn-border-shadow:hover:before {
 
 /*ユーザー編集囲み*/
 .usereditbox{
-background: rgba(255, 245, 238, 0.61);
+  background: rgba(255, 245, 238, 0.61);
   border: 1px solid #ef858c;  /* 線の太さ・種類・色 */
   border-radius: 5px;
-  padding: 45px 10px 10px 10px; /* 内側の余白 上・右・左・下 */
+  padding: 70px 10px 10px 10px; /* 内側の余白 上・右・左・下 */
   position: relative;
   z-index: 0;
-  width: 60%;
+  width: 40%;
   font-family: 'Dodfonts';
   margin: auto;
   text-align: center;
@@ -546,7 +530,7 @@ background: rgba(255, 245, 238, 0.61);
   border-radius: 5px 5px 0px 0px;
   color: #fff;  /* タイトル部分文字色 */
   content: 'ステータス編集';
-  font-size: 40px;
+  font-size: 30px;
   height: 55px; /* タイトル部分高さ */
   padding: 5px 10px;
   position: absolute;
@@ -673,7 +657,7 @@ dl.searchbox dd{
 /*投稿編集囲み*/
 .posteditbox {
     padding: 0.2em 0.5em;
-    margin: 2em 0;
+    margin: 6em 8em;
     color: #565656;
     background: #86b6b994;
     box-shadow: 0px 0px 0px 10px #a5a5debd;
@@ -685,29 +669,6 @@ dl.searchbox dd{
 
 .posteditbox h2{
   font-family: 'Dodfonts';
-}
-
-/*フッター*/
-footer{
-    width: 100%;
-    background-color: #89c7deba;
-    color: #fff;
-    text-align: center;
-    padding: 30px 0;
-    bottom: 0; /*下に固定*/
-}
-
-.wrapper{
-    min-height: 100vh;
-    position: relative;/*←相対位置*/
-    padding-bottom: 70px;/*←footerの高さ*/
-    box-sizing: border-box;/*←全て含めてmin-height:100vhに*/
-}
-
-.container{
-  width:80%;
-margin-right: auto;
-margin-left : auto;
 }
 
 /*カラー設定*/
@@ -734,3 +695,12 @@ margin-left : auto;
 .red2{
   color: #e65e71;
 }
+
+.black{
+  color: #000000;
+}
+
+input[type="text"] {
+        width: 100%;
+        height: 2em;
+    }

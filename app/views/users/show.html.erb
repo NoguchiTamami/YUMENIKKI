@@ -1,4 +1,4 @@
-<br><br><div class="container">
+<div class="container">
  <p id="notice"><%= notice %></p>
  <div class="row">
   <div class="col-xs-4">
@@ -10,7 +10,7 @@
     <h1 class="text-center"><%= @user.name %>のみた夢</h1>
     <table class='table table-hover table-inverse'>
      <thead>
-      <tr> 
+      <tr>
        <th><%= sort_link(@search, :title, 'どんな夢？') %></th>
        <th>なにがおきたの？</th>
        <th><%= sort_link(@search, :created_at, '投稿日') %></th>
