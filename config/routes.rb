@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   devise_for :users
   # Home Controller
   root  'homes#top'
+  #タグ
   get 'tags/:tag', to: 'posts#index', as: :tag
   #Posts Controller
   resources :posts do
