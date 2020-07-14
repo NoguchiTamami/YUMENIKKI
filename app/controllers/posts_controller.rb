@@ -22,11 +22,10 @@ class PostsController < ApplicationController
    @post = Post.new
    @user = current_user
    if params[:tag]
-      @posts = Post.tagged_with(params[:tag])
+      @posts = Post.tagged_with(params[:tag]).page(params[:page]).reverse_order
     else
-      @posts = Post.all
+      @posts = Post.page(params[:page]).reverse_order
     end
-    @posts = Post.page(params[:page]).reverse_order
   end
 
   def show
