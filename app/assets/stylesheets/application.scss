@@ -30,12 +30,6 @@
 /**/
 .i{
 	font-size: 32px;
-	color: #ff69b4;
-}
-
-/**/
-.i{
-	font-size: 32px;
 	color: #ffb6c1;
 }
 
@@ -59,94 +53,10 @@ h2 {
     margin-bottom: 6px;
 }
 
-/*投稿一覧囲み*/
-  .postindexbox{
-    padding: 0.2em 0.5em;
-    margin: 2em 0;
-    color: #565656;
-    background: #f1e6ace6;
-    box-shadow: 0px 0px 0px 10px #efcdb9;
-    border: dashed 2px #de9105;
-    border-radius: 8px;
-}
-
- .postindexbox  h1{
-    font-family: 'Dodfonts';
-}
-
-/*ユーザー一覧囲み*/
-.userindexbox{
-    padding: 0.2em 0.5em;
-    margin: 2em 0;
-    background: #d6ebffe3;
-    box-shadow: 0px 0px 0px 10px #d6ebff;
-    border: dashed 2px white;
-}
-
-.userindexbox h1{
-    font-family: 'Dodfonts';
-}
-
-/**/
-.box18{
-    margin:2em 0;
-    position: relative;
-    padding: 0.25em 1em;
-    border: solid 2px #ffcb8a;
-    border-radius: 3px 0 3px 0;
-}
-.box18:before,.box18:after
-{
-    content: '';
-    position: absolute;
-    width:10px;
-    height: 10px;
-    border: solid 2px #ffcb8a;
-    border-radius: 50%;
-}
-.box18:after {
-    top:-12px;
-    left:-12px;
-}
-.box18:before {
-    bottom:-12px;
-    right:-12px;
-}
-
-/*会員ページ囲み*/
-.mypagebox {
-    position: relative;
-    margin: 2em 0 2em 40px;
-    padding: 8px 15px;
-    background: #fff0c6e3;
-    border-radius: 30px;
-}
-.mypagebox:before{font-family: FontAwesome;
-    content: "\f111";
-    position: absolute;
-    font-size: 15px;
-    left: -40px;
-    bottom: 0;
-    color: #fff0c6;
-}
-.mypagebox:after{
-    font-family: FontAwesome;
-    content: "\f111";
-    position: absolute;
-    font-size: 23px;
-    left: -23px;
-    bottom: 0;
-    color: #fff0c6;
-}
-
-.mypagebox h1{
-  font-family: 'Dodfonts';
-}
-
 /*新規投稿囲み*/
 .newbox{
-	background-color: #eca1f5bf;  /* 背景色 */
-	border-radius: 5px;
+	background-color: #efdfd0;
+	border-radius: 50px;
 	margin: 20px 5px; /* 外側の余白 上下・左右 */
 	padding: 30px 20px 20px 20px; /* 内側の余白 上・右・下・左 */
 	position: relative;
@@ -166,8 +76,8 @@ h2 {
 }
 
 .newbox:before{
-	border: 1px solid #fff; /* 白い実線 */
-	border-radius: 5px;
+	border: 3px solid #b8bcea;
+	border-radius: 50px;
 	content: '';
 	display: block;
 	margin: 4px;
@@ -232,74 +142,9 @@ h2 {
 	z-index: -1;
 }
 
-/*投稿詳細囲み*/
-.postdetailbox{
-    font-family: 'Dodfonts';
-    border: 4px dotted #bed008; /* 線の太さ・種類・色 */
-    margin: 30px 20px;  /* 外側の余白 上下・左右 */
-    padding: 15px 20px; /* 内側の余白 上下・左右 */
-    position: relative;
-    background: #a8eadfd6;
-}
-
-.postdetailbox h2{
-  font-family: 'Dodfonts';
-}
-
-.postdetailbox:before{
-    content: '＊';
-    color: #fff;    /* 左上の花の色 */
-    font-size: 50px;    /* 左上の花のサイズ */
-    font-weight: bold; 
-    position: absolute;
-    top: -38px;
-    left: -25px;
-    transform: rotate(20deg);
-    -moz-transform: rotate(20deg);
-    -webkit-transform: rotate(20deg); 
-    -o-transform: rotate(20deg);
-    text-shadow:  0 0 8px #a8c0ea, 0 0 6px #a8b3ea, 0 0 4px #eaa8bf, 0 0 2px #eaa8bf, 0 0 0.5px #eaa8bf;    /* 左上の花の縁取りの色 */
-}
-.postdetailbox:after{
-    content: '*';
-    color: #fff;    /* 右下の花の色 */
-    font-size: 50px;    /* 右下の花のサイズ */
-    font-weight: bold; 
-    position: absolute;
-    bottom: -45px;
-    right: -15px;
-    transform: rotate(20deg);
-    -moz-transform: rotate(20deg);
-    -webkit-transform: rotate(20deg); 
-    -o-transform: rotate(20deg);
-    text-shadow:  0 0 8px #a8c0ea, 0 0 6px #a8b3ea, 0 0 4px #eaa8bf, 0 0 2px #eaa8bf, 0 0 0.5px #eaa8bf;    /* 右下の花の縁取りの色 */
-}
-
-/*トップページ*/
-.topbox{
-  font-family: 'Dodfonts';
-  margin: 1em 0;
-  padding: 1em;
-  background-size: 20px 20px;
-  border-radius: 5px;
-  background-color: #f9ffff;
-  background-image: linear-gradient(45deg,rgba(255,186,238,.1) 25%,transparent 25%,transparent 50%,rgba(255,186,238,.1) 50%,rgba(255,186,238,.1) 75%,transparent 75%,transparent),linear-gradient(-45deg,rgba(255,186,238,.1) 25%,transparent 25%,transparent 50%,rgba(255,186,238,.1) 50%,rgba(255,186,238,.1) 75%,transparent 75%,transparent);
-  border: solid 2px #f48fb1;
-}
-
-.topbox p{
-  font-family: 'Dodfonts';
-  margin: 0;
-  padding: 0;
-}
-
-.topbox h1{
-  font-family: 'Dodfonts';
-}
-
 /**/
 body {
-  background-image: image-url("72521588_p1.png");
+  background: #f5f1ed;
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -329,10 +174,10 @@ border-radius: 10px;
 
 /*会員情報囲み*/
 .userbox{
-  background: rgba(215, 253, 205, 0.61);
+  background: #ffffff;
   margin: 2em 0;
   padding: 25px;
-  border-radius: 10px;
+  border-radius: 50px;
 }
 
 .userbox-circle1{
@@ -510,79 +355,11 @@ a.btn-border-shadow:hover:before {
   left: 0;
 }
 
-/*ユーザー編集囲み*/
-.usereditbox{
-  background: rgba(255, 245, 238, 0.61);
-  border: 1px solid #ef858c;  /* 線の太さ・種類・色 */
-  border-radius: 5px;
-  padding: 70px 10px 10px 10px; /* 内側の余白 上・右・左・下 */
-  position: relative;
-  z-index: 0;
-  width: 40%;
-  font-family: 'Dodfonts';
-  margin: auto;
-  text-align: center;
-  height: 70%;
-  vertical-align: middle;
-}
-.usereditbox:before{
-  background-color: #ef858c;  /* タイトル部分背景色 */
-  border-radius: 5px 5px 0px 0px;
-  color: #fff;  /* タイトル部分文字色 */
-  content: 'ステータス編集';
-  font-size: 30px;
-  height: 55px; /* タイトル部分高さ */
-  padding: 5px 10px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 2;
-}
-.usereditbox:after {
-  border-style: solid;
-  border-width: 10px 10px 0 10px;
-  border-color: #ef858c transparent transparent transparent;  /* 吹き出し三角部分の色 */
-  content: "";
-  position: absolute;
-  top: px;
-  left: 10px;
-  width: 0px;
-  height: 0px;
-  z-index: 1;
-}
-
 @font-face {
   font-family: 'Dod';
   src: asset_url('PixelMplus12-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
-}
-
-/*警告夢囲み*/
-.detail1 {
-font-family: 'Dod';
-padding: 1em;
-margin: 2em auto;
-width:100%;
-color: #f3f3f3;
-background: #010e0ead;
-border-top: solid 15px #3b4c5f;
-}
-
-.detail1 h3{
-font-family: 'Dodfonts';
-}
-
-/*縁起夢囲み*/
-.detail2 {
-font-family: 'Dod';
-padding: 1em;
-margin: 2em auto;
-width:100%;
-color: #f5efef;
-background: #f96275d6;
-border-top: solid 15px #fbab58db;
 }
 
 .detail2 h3{
@@ -654,23 +431,6 @@ dl.searchbox dd{
   border-radius: 15px;    /*角を丸くする*/
 }
 
-/*投稿編集囲み*/
-.posteditbox {
-    padding: 0.2em 0.5em;
-    margin: 6em 8em;
-    color: #565656;
-    background: #86b6b994;
-    box-shadow: 0px 0px 0px 10px #a5a5debd;
-    border: dashed 2px #ad4672;
-    border-radius: 8px;
-    font-family: 'Dodfonts';
-    width: 50%;
-}
-
-.posteditbox h2{
-  font-family: 'Dodfonts';
-}
-
 /*カラー設定*/
 .red{
   background: #e65e71;
@@ -699,8 +459,88 @@ dl.searchbox dd{
 .black{
   color: #000000;
 }
+.blue{
+ background: #a7c4e0;
+ }
 
-input[type="text"] {
-        width: 100%;
-        height: 2em;
-    }
+
+/*テキストフォーム*/
+.cp_iptxt {
+  position: relative;
+  width: 50%;
+  margin: 40px 3%;
+}
+.cp_iptxt input[type='text'] {
+  font: 15px/24px sans-serif;
+  box-sizing: border-box;
+  width: 200%;
+  padding: 0.3em;
+  padding-left: 40px;
+  letter-spacing: 1px;
+  border: 0;
+}
+.cp_iptxt input[type='text']:focus {
+  outline: none;
+}
+.cp_iptxt input[type='text']:focus::after {
+  outline: none;
+}
+.cp_iptxt i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 9px 5px;
+  transition: 0.3s;
+  color: #aaaaaa;
+}
+.cp_iptxt::after {
+  display: block;
+  width: 200%;
+  height: 4px;
+  margin-top: -1px;
+  content: '';
+  border-width: 0 1px 1px 1px;
+  border-style: solid;
+  border-color: #ce63b9;
+}
+
+
+
+/*リンクカラー*/
+a {
+font-weight:bold;
+text-decoration:none;
+}
+
+a:link {
+color:#333333;
+}
+
+a:visited {
+color:#666666;
+}
+
+a:hover {
+color:#ff6633
+}
+
+a:active {
+color:#ff0066;
+}
+
+.image1 {
+  background-image: url(topimage1.jpg);
+}
+.image2 {
+  background-image: url(topimage2.jpg);
+}
+.image3 {
+  background-image: url(topimage3.jpg);
+}
+.image4 {
+  background-image: url(topimage4.jpg);
+}
+
+.container2{
+  height: 90%;
+}
