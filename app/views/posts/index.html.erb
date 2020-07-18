@@ -23,10 +23,9 @@
               <tr>
                 <td><%= link_to user_path(post.user) do %>
                   <%= attachment_image_tag post.user, :profile_image,  class: "img-circle pull-left profile-thumb", fallback: "girl.jpg", size: "50x50" %><% end %></td>
-                <td><%= link_to post.title, post %></td>
+                <td><%= link_to post.title,post %></td>
                 <td><%= simple_format(post.body) %></td>
                 <td><%= time_ago_in_words(post.created_at) %>前</td>
-                <!-- 要修正 -->
                 <td><%= raw(post.tag_list.map { |t| link_to t, posts_path(tag: t) }.join(', ')) %></td>
               </tr>
               <% end %>

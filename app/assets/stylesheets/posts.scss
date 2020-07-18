@@ -1,3 +1,104 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*投稿詳細囲み*/
+.postdetailbox{
+    font-family: 'Dodfonts';
+    border: 2px groove #e3acae; /* 線の太さ・種類・色 */
+    margin: 30px 20px;  /* 外側の余白 上下・左右 */
+    padding: 15px 20px; /* 内側の余白 上下・左右 */
+    position: relative;
+    background: #f5f1ed;
+}
+
+.postdetailbox h2{
+  font-family: 'Dodfonts';
+}
+
+.postdetailbox:before{
+    content: '＊';
+    color: #fff;    /* 左上の花の色 */
+    font-size: 50px;    /* 左上の花のサイズ */
+    font-weight: bold; 
+    position: absolute;
+    top: -38px;
+    left: -25px;
+    transform: rotate(20deg);
+    -moz-transform: rotate(20deg);
+    -webkit-transform: rotate(20deg); 
+    -o-transform: rotate(20deg);
+    text-shadow:  0 0 8px #a8c0ea, 0 0 6px #a8b3ea, 0 0 4px #eaa8bf, 0 0 2px #eaa8bf, 0 0 0.5px #eaa8bf;    /* 左上の花の縁取りの色 */
+}
+.postdetailbox:after{
+    content: '*';
+    color: #fff;    /* 右下の花の色 */
+    font-size: 50px;    /* 右下の花のサイズ */
+    font-weight: bold; 
+    position: absolute;
+    bottom: -45px;
+    right: -15px;
+    transform: rotate(20deg);
+    -moz-transform: rotate(20deg);
+    -webkit-transform: rotate(20deg); 
+    -o-transform: rotate(20deg);
+    text-shadow:  0 0 8px #a8c0ea, 0 0 6px #a8b3ea, 0 0 4px #eaa8bf, 0 0 2px #eaa8bf, 0 0 0.5px #eaa8bf;    /* 右下の花の縁取りの色 */
+}
+
+/*警告夢囲み*/
+.detail1 {
+font-family: 'Dod';
+padding: 1em;
+margin: 2em auto;
+width:100%;
+color: #f3f3f3;
+background: #010e0ead;
+border-top: solid 15px #3b4c5f;
+}
+
+.detail1 h3{
+font-family: 'Dodfonts';
+}
+
+/*縁起夢囲み*/
+.detail2 {
+font-family: 'Dod';
+padding: 1em;
+margin: 2em auto;
+width:100%;
+color: #f5efef;
+background: #f96275d6;
+border-top: solid 15px #fbab58db;
+}
+
+/*投稿編集囲み*/
+.posteditbox {
+    padding: 0.2em 0.5em;
+    margin: 6em 8em;
+    color: #565656;
+    background: #86b6b994;
+    box-shadow: 0px 0px 0px 10px #a5a5debd;
+    border: dashed 2px #ad4672;
+    border-radius: 8px;
+    font-family: 'Dodfonts';
+    width: 50%;
+}
+
+.posteditbox h2{
+  font-family: 'Dodfonts';
+}
+
+/*投稿一覧囲み*/
+  .postindexbox{
+    padding: 0.2em 0.5em;
+    margin: 2em 0;
+    color: #565656;
+    background: #f5f1ed;
+    box-shadow: 0px 0px 0px 10px #f5f1ed;
+    border: dashed 2px #ffffff;
+    border-radius: 8px;
+}
+
+ .postindexbox  h1{
+    font-family: 'Dodfonts';
+}

@@ -1,38 +1,16 @@
-<br><br><br>
-
-<div class="container">
+<div class="container2">
   <div class="row">
     <% if flash[:notice] %>
-      <div class="flash">
-      <%= flash[:notice] %>
-      </div>
-   <% end %><br>
-    <div class="col-xs-3">
-      <div class="topbox">
-       <h1>ようこそ<br><strong>夢</strong>の世界へ</h1>
-       <p>見た夢の内容を共有しましょう<br>
-          会員登録はこちら<i class="glyphicon glyphicon-arrow-down" aria-hidden="true"></i>
-       </p>
-        <div>
-         <%= link_to "Log in", new_user_session_path,  class: "btn btn-info btn-block" %>
-        </div>
-        <div>
-         <%= link_to "Sign up", new_user_registration_path,  class: "btn btn-success btn-block"%>
-       </div>
-     </div>
-   </div>
-   <div class="col-xs-6">
-    <%= image_tag 'neko.jpg',:size => '400x250' %>
-   </div>
-   <div class="col-xs-3">
-   </div>
-  </div>
-  <div class="row">
-    <div class="col-xs-3">
-    </div>
-    <div class="col-xs-5">
-    </div>
-    <div class="col-xs-4">
+    <% end %>
+ <div class="col-xs-12">
+  <div id="container">
+    <div id="theTarget">
+      <div class="image1"></div>
+      <div class="image2"></div>
+      <div class="image3"></div>
+      <div class="image4"></div>
     </div>
   </div>
+</div>
+</div>
 </div>
