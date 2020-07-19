@@ -528,17 +528,18 @@ a:active {
 color:#ff0066;
 }
 
+/*skipper*/
 .image1 {
-  background-image: url(topimage1.jpg);
+  background-image: image-url("topimage1.jpg");
 }
 .image2 {
-  background-image: url(topimage2.jpg);
+  background-image: image-url("topimage2.jpg");
 }
 .image3 {
-  background-image: url(topimage3.jpg);
+  background-image: image-url("topimage3.jpg");
 }
 .image4 {
-  background-image: url(topimage4.jpg);
+  background-image: image-url("topimage4.jpg");
 }
 
 .container2{
