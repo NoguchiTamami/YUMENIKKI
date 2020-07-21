@@ -11,12 +11,12 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery_ujs
+//= require rails-ujs
 //= require activestorage
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require_tree .
-
+/*
 $(document).on('turbolinks:load', function(){
 	console.log('onSkippr');
   $("#theTarget").skippr({
@@ -42,3 +42,4 @@ $(document).on('turbolinks:load', function(){
    hidePrevious : false
    }); 
 });
+*/
