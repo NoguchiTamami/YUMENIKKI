@@ -11,13 +11,14 @@
 // about supported directives.
 //
 //= require jquery
-//= require rails-ujs
+//= require jquery_ujs
 //= require activestorage
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require_tree .
 
-$(document).ready(function () {
+$(document).on('turbolinks:load', function(){
+	console.log('onSkippr');
   $("#theTarget").skippr({
     // スライドショーの変化 ("fade" or "slide")
     transition : 'slide',
@@ -38,6 +39,6 @@ $(document).ready(function () {
     // キーボードの矢印キーによるスライド送りの設定(trueで有効)
     keyboardOnAlways : true,
     // 一枚目のスライド表示時に戻る矢印を表示するかどうか(falseで非表示)
-    hidePrevious : false
-  });
+   hidePrevious : false
+   }); 
 });
