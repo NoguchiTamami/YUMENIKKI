@@ -18,15 +18,6 @@
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
 
-
-/**/
-.logo {
-	font-size: 40px;
-	bottom: 0;
-	top: 20;
-	color: #642020;
-}
-
 /**/
 .i{
 	font-size: 32px;
@@ -132,7 +123,7 @@ h2 {
 }
 
 .header-box2:after{
-	background: repeating-linear-gradient(-45deg, #f5d5da, #f5d5da 5px, #fcf0f1 0, #fcf0f1 10px);
+	background: repeating-linear-gradient(-45deg, #efb997, #ecc57c 5px, #f5f3b3 0, #fbf7ee 10px);
 	content: '';
 	position: absolute;
 	top: 5px;
@@ -530,7 +521,7 @@ color:#ff0066;
 
 /*skipper*/
 .image1 {
-  background-image: image-url("testimage1.jpg");
+  background-image: image-url("topimage1.jpg");
 }
 .image2 {
   background-image: image-url("topimage2.jpg");
@@ -544,4 +535,12 @@ color:#ff0066;
 
 .container2{
   height: 90%;
+}
+
+/**/
+.logo {
+  font-size: 40px;
+  bottom: 0;
+  top: 20;
+  color: #642020;
 }

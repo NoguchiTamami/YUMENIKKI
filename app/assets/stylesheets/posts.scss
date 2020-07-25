@@ -4,7 +4,6 @@
 
 /*投稿詳細囲み*/
 .postdetailbox{
-    font-family: 'Dodfonts';
     border: 2px groove #e3acae; /* 線の太さ・種類・色 */
     margin: 30px 20px;  /* 外側の余白 上下・左右 */
     padding: 15px 20px; /* 内側の余白 上下・左右 */
@@ -102,3 +101,26 @@ border-top: solid 15px #fbab58db;
  .postindexbox  h1{
     font-family: 'Dodfonts';
 }
+
+/*リンクカラー*/
+a {
+font-weight:bold;
+text-decoration:none;
+}
+
+a:link {
+color:#333333;
+}
+
+a:visited {
+color:#666666;
+}
+
+a:hover {
+color:#ff6633
+}
+
+a:active {
+color:#ff0066;
+}
+
