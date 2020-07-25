@@ -31,18 +31,6 @@
   right: 0;
   z-index: 2;
 }
-.usereditbox:after {
-  border-style: solid;
-  border-width: 10px 10px 0 10px;
-  border-color: #ef858c transparent transparent transparent;  /* 吹き出し三角部分の色 */
-  content: "";
-  position: absolute;
-  top: px;
-  left: 10px;
-  width: 0px;
-  height: 0px;
-  z-index: 1;
-}
 
 /*会員ページ囲み*/
 .mypagebox {

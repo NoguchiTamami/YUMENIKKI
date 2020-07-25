@@ -12,15 +12,16 @@
           </h2>
           <tr>
           <th><%= simple_format(@post.body) %></th>
-          <th><%= time_ago_in_words(@post.created_at) %>前に投稿<th>
+          <th>タグ： <%= raw(@post.tag_list.map { |t| link_to t, tag_path(t) }.join(',')) %></th><br>
+           <th><%= time_ago_in_words(@post.created_at) %>前に投稿</th>
+          </tr><br><br>
+          <tr>
           <th><%= link_to '編集する', edit_post_path(@post), class: "btn btn-border-shadow yellow" %></th>
           <th><%= link_to '投稿を消去', post_path(@post), method: :delete, class: "btn btn-border-shadow red" %></th>
-          <tr>
           <div class="post_<%= @post.id %> btn">
           <%= render :partial => 'posts/favorite', :locals => {:post => @post} %>
           </div>
-          <!-- 要修正 -->
-          <p>tags: <%= raw(@post.tag_list.map { |t| link_to t, tag_path(t) }.join(',')) %></p>
+        </tr>
       </div>
       <div class="detail1">
         見るとちょっと危険かも？<h3>警告夢とは</h3>

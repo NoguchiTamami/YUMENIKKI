@@ -28,6 +28,7 @@ gem 'ransack'
 gem 'font-awesome-sass', '~> 5.4.1'
 gem 'acts-as-taggable-on', '~> 6.0'
 gem 'dotenv-rails'
+gem 'rails-i18n'
 group :production do
   gem 'mysql2'
 end
