@@ -454,6 +454,10 @@ dl.searchbox dd{
  background: #a7c4e0;
  }
 
+.white{
+  color: #fff;
+}
+
 
 /*テキストフォーム*/
 .cp_iptxt {
@@ -520,6 +524,9 @@ color:#ff0066;
 }
 
 /*skipper*/
+
+
+
 .image1 {
   background-image: image-url("topimage1.jpg");
 }
@@ -534,7 +541,7 @@ color:#ff0066;
 }
 
 .container2{
-  height: 90%;
+  height: 60%;
 }
 
 /**/
@@ -544,3 +551,21 @@ color:#ff0066;
   top: 20;
   color: #642020;
 }
+
+.hero{
+  width: 100%;
+  height: 80%;
+  min-height: 500px;
+  position: relative;
+}
+
+.tagline{
+  position: absolute;
+  left: 10%;
+  top: 50%;
+  width: 80%;
+  height: 80%;
+  z-index: 999;
+  color: white;
+  font-size: 3rem;
+  }
