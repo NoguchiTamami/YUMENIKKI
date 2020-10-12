@@ -22,14 +22,6 @@
             <li><%= link_to "ユーザー一覧","/users", class: "btn btn-border-shadow w" %></li>
             <li><%= link_to "投稿一覧","/posts", class: "btn btn-border-shadow w" %></li>
             <li><%= link_to "ログアウト",destroy_user_session_path, class: "glyphicon glyphicon-log-out logout btn btn-border-shadow w",method: :delete %></li>
-            <li>
-              <dl class="searchbox">
-                <%= search_form_for @search, url: posts_path do |f| %>
-        <dt><%= f.text_field :title_cont, placeholder: 'どんな夢をお探しですか' %></dt>
-         <dd><%= f.submit ("検索") , class: 'search-btn'%></dd>
-         <% end %>
-         </dl>
-            </li>
           </ul>
         </nav>
 
